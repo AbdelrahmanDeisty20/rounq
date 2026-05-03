@@ -33,14 +33,15 @@ class ImageController extends Controller
 
         $section = $request->section;
 
-        // Find existing or create new (except for gallery where we want many)
-        if (!str_starts_with($section, 'gallery')) {
+        // Unique sections like hero, service-*, step-*, and specific gallery categories
+        if ($section !== 'gallery') {
             $image = SiteImage::where('section', $section)->first();
             if (!$image) {
                 $image = new SiteImage(['section' => $section]);
             }
         } else {
-            $image = new SiteImage(['section' => $section]);
+            // General gallery section allows multiple images
+            $image = new SiteImage(['section' => 'gallery']);
         }
 
         if ($request->title) {
