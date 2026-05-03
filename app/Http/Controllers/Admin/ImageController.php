@@ -52,11 +52,12 @@ class ImageController extends Controller
             if ($image->path) {
                 Storage::disk('public')->delete($image->path);
             }
+            // Laravel automatically creates the 'images' folder if it doesn't exist
             $path = $request->file('image')->store('images', 'public');
             $image->path = $path;
-            $image->url = asset('storage/' . $path);
+            // No need to set $image->url because the accessor handles it now
         } elseif ($request->url) {
-            // Use URL, clear old path
+            // Use external URL, clear old path
             if ($image->path) {
                 Storage::disk('public')->delete($image->path);
                 $image->path = null;
