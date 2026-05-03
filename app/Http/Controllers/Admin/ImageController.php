@@ -66,6 +66,10 @@ class ImageController extends Controller
 
         $image->save();
 
+        if ($request->ajax()) {
+            return response()->json(['success' => true, 'message' => 'تم تحديث الصورة بنجاح']);
+        }
+
         return back()->with('success', 'تم تحديث الصورة بنجاح');
     }
 
@@ -82,6 +86,10 @@ class ImageController extends Controller
             Storage::disk('public')->delete($image->path);
         }
         $image->delete();
+
+        if (request()->ajax()) {
+            return response()->json(['success' => true, 'message' => 'تم حذف الصورة بنجاح']);
+        }
 
         return back()->with('success', 'تم حذف الصورة بنجاح');
     }
