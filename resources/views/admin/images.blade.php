@@ -11,6 +11,27 @@
 <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 </head>
 <body>
+@php
+    $sectionLabels = [
+        'hero' => 'الخلفية الرئيسية',
+        'service-1' => 'خدمة 1 — فك وتركيب',
+        'service-2' => 'خدمة 2 — شاحنة نقل',
+        'service-3' => 'خدمة 3 — نقل بضمان',
+        'service-4' => 'خدمة 4 — نقل آمن',
+        'service-5' => 'خدمة 5 — أسعار',
+        'service-6' => 'خدمة 6 — تغليف',
+        'service-7' => 'خدمة 7 — فك غرف',
+        'service-8' => 'خدمة 8 — بين المدن',
+        'step-1' => 'الخطوة ١ — تواصل',
+        'step-2' => 'الخطوة ٢ — الحجم',
+        'step-3' => 'الخطوة ٣ — معاينة',
+        'step-4' => 'الخطوة ٤ — تغليف',
+        'step-5' => 'الخطوة ٥ — نقل',
+        'step-6' => 'الخطوة ٦ — تركيب',
+        'gallery-packing' => 'معرض — التغليف بالكراتين',
+        'gallery-trucks' => 'معرض — شاحنات النقل',
+    ];
+@endphp
 
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar" onclick="event.stopPropagation()">
@@ -45,14 +66,23 @@
       <li><a href="#" onclick="switchTab('services', this)" id="nav-services"><span class="nav-icon">🛋️</span> صور الخدمات</a></li>
       <li><a href="#" onclick="switchTab('steps', this)" id="nav-steps"><span class="nav-icon">🔢</span> صور خطوات العمل</a></li>
       <li><a href="#" onclick="switchTab('gallery', this)" id="nav-gallery"><span class="nav-icon">📸</span> معرض الأعمال</a></li>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">أدوات إضافية</div>
+    <ul class="sidebar-nav">
+      <li><a href="#" onclick="switchTab('upload', this)" id="nav-upload"><span class="nav-icon">⬆️</span> رفع صور جديدة</a></li>
+      <li><a href="#" onclick="switchTab('url', this)" id="nav-url"><span class="nav-icon">🔗</span> إضافة صور برابط</a></li>
     </ul>
   </div>
 
   <div class="sidebar-section">
-    <div class="sidebar-section-title">أدوات</div>
+    <div class="sidebar-section-title">الحساب</div>
     <ul class="sidebar-nav">
-      <li><a href="#" onclick="switchTab('upload', this)" id="nav-upload"><span class="nav-icon">⬆️</span> رفع صور جديدة</a></li>
-      <li><a href="#" onclick="switchTab('url', this)" id="nav-url"><span class="nav-icon">🔗</span> إضافة صور برابط</a></li>
+      <li>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+          <span class="nav-icon">🚪</span> تسجيل الخروج
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
+      </li>
     </ul>
   </div>
 
@@ -129,7 +159,7 @@
             <div class="img-badge">{{ strtoupper($image->section) }}</div>
           </div>
           <div class="card-info">
-            <h4>{{ $image->title ?? 'بدون عنوان' }}</h4>
+            <h4>{{ $sectionLabels[strtolower($image->section)] ?? $image->title ?? 'صورة موقع' }}</h4>
             <div class="loc">📍 {{ $image->location_hint ?? 'موقع غير محدد' }}</div>
             <div class="card-actions">
               <button class="btn btn-primary btn-sm" onclick="openChangeModal('{{ $image->id }}', '{{ $image->title }}', '{{ $image->url }}')">✏️ تغيير</button>
@@ -174,10 +204,13 @@
             <div class="img-item active-img">
               <img src="{{ $image->url }}" alt="">
               <div class="img-item-info">
-                <div class="img-item-label">{{ $image->title }}</div>
+                <div class="img-item-label">
+                  {{ $sectionLabels[strtolower($image->section)] ?? $image->title ?? 'صورة موقع' }}
+                </div>
                 <div class="img-item-actions">
                   <button class="btn btn-primary btn-sm" onclick="openChangeModal('{{ $image->id }}','{{ $image->title }}','{{ $image->url }}')">✏️ تغيير</button>
-                  <button class="btn btn-outline btn-sm" onclick="previewImg('{{ $image->url }}')">👁️</button>
+                  <button class="btn btn-outline btn-sm" onclick="previewImg('{{ $image->url }}')">👁️ معاينة</button>
+                  <button class="btn btn-danger btn-sm" onclick="deleteImage('{{ $image->id }}')">🗑️ حذف</button>
                 </div>
               </div>
             </div>
@@ -199,10 +232,13 @@
             <div class="img-item active-img">
               <img src="{{ $image->url }}" alt="">
               <div class="img-item-info">
-                <div class="img-item-label">{{ $image->title }}</div>
+                <div class="img-item-label">
+                  {{ $sectionLabels[strtolower($image->section)] ?? $image->title ?? 'صورة موقع' }}
+                </div>
                 <div class="img-item-actions">
                   <button class="btn btn-primary btn-sm" onclick="openChangeModal('{{ $image->id }}','{{ $image->title }}','{{ $image->url }}')">✏️ تغيير</button>
-                  <button class="btn btn-outline btn-sm" onclick="previewImg('{{ $image->url }}')">👁️</button>
+                  <button class="btn btn-outline btn-sm" onclick="previewImg('{{ $image->url }}')">👁️ معاينة</button>
+                  <button class="btn btn-danger btn-sm" onclick="deleteImage('{{ $image->id }}')">🗑️ حذف</button>
                 </div>
               </div>
             </div>
@@ -216,16 +252,72 @@
     <div class="panel" id="panel-gallery">
       <div class="section-card">
         <div class="section-card-header">
-          <h3>📸 صور معرض الأعمال</h3>
-          <button class="btn btn-success" onclick="switchTab('upload', null)">➕ إضافة صورة جديدة</button>
+          <h3>📸 معرض الأعمال (خانات ثابتة)</h3>
         </div>
         <div class="section-card-body">
-          <div class="img-grid" id="galleryGrid">
+          <p style="font-size:13px;color:var(--muted);margin-bottom:20px">يتم تبديل الصور في هذه الخانات الثابتة لضمان أفضل تنسيق للموقع.</p>
+          <div class="img-grid">
+            @php
+              $gallerySlots = [
+                'gallery-trucks' => 'معرض — شاحنات النقل',
+                'gallery-packing' => 'معرض — التغليف بالكراتين',
+              ];
+            @endphp
+
+            @foreach($gallerySlots as $slotSec => $slotLabel)
+              @php $image = $images->filter(fn($img) => strtolower($img->section) == $slotSec)->first(); @endphp
+              <div class="img-item {{ $image ? 'active-img' : 'placeholder-item' }}" style="height:280px">
+                @if($image)
+                  <img src="{{ $image->url }}" alt="">
+                  <div class="img-item-info">
+                    <div class="img-item-label">{{ $slotLabel }}</div>
+                    <div class="img-item-actions">
+                      <button class="btn btn-primary btn-sm" onclick="openChangeModal('{{ $image->id }}','{{ $slotLabel }}','{{ $image->url }}')">✏️ تغيير</button>
+                      <button class="btn btn-outline btn-sm" onclick="previewImg('{{ $image->url }}')">👁️ معاينة</button>
+                      <button class="btn btn-danger btn-sm" onclick="deleteImage('{{ $image->id }}')">🗑️ حذف</button>
+                    </div>
+                  </div>
+                @else
+                  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--muted);gap:10px;cursor:pointer;background:#f9f9f9;border-radius:12px;border:2px dashed #ddd" onclick="switchTab('upload', null)">
+                    <span style="font-size:30px">+</span>
+                    <span style="font-size:12px">أضف صورة {{ $slotLabel }}</span>
+                  </div>
+                @endif
+              </div>
+            @endforeach
+          </div>
+        </div>
+        <!-- Old Gallery Hidden Loop (to avoid breaking anything for now) -->
+        <div style="display:none">
             @foreach($images->filter(fn($img) => str_starts_with($img->section, 'gallery')) as $image)
             <div class="img-item active-img" id="gal-{{ $image->id }}">
               <img src="{{ $image->url }}" alt="">
               <div class="img-item-info">
-                <div class="img-item-label">{{ $image->title }}</div>
+                <div class="img-item-label">
+                  @php
+                    $labels = [
+                        'hero' => 'الخلفية الرئيسية',
+                        'service-1' => 'خدمة 1 — فك وتركيب',
+                        'service-2' => 'خدمة 2 — شاحنة نقل',
+                        'service-3' => 'خدمة 3 — نقل بضمان',
+                        'service-4' => 'خدمة 4 — نقل آمن',
+                        'service-5' => 'خدمة 5 — أسعار',
+                        'service-6' => 'خدمة 6 — تغليف',
+                        'service-7' => 'خدمة 7 — فك غرف',
+                        'service-8' => 'خدمة 8 — بين المدن',
+                        'step-1' => 'الخطوة ١ — تواصل',
+                        'step-2' => 'الخطوة ٢ — الحجم',
+                        'step-3' => 'الخطوة ٣ — معاينة',
+                        'step-4' => 'الخطوة ٤ — تغليف',
+                        'step-5' => 'الخطوة ٥ — نقل',
+                        'step-6' => 'الخطوة ٦ — تركيب',
+                        'gallery-packing' => 'معرض — التغليف بالكراتين',
+                        'gallery-trucks' => 'معرض — شاحنات النقل',
+                        'gallery' => 'معرض الأعمال',
+                    ];
+                  @endphp
+                  {{ $labels[$image->section] ?? $image->title ?? 'صورة موقع' }}
+                </div>
                 <div class="img-item-actions">
                   <button class="btn btn-primary btn-sm" onclick="openChangeModal('{{ $image->id }}','{{ $image->title }}','{{ $image->url }}')">✏️</button>
                   <button class="btn btn-outline btn-sm" onclick="previewImg('{{ $image->url }}')">👁️</button>
@@ -278,6 +370,9 @@
                 <option value="step-6">الخطوة ٦ — تركيب</option>
                 <option value="gallery-packing">معرض — التغليف بالكراتين</option>
                 <option value="gallery-trucks">معرض — شاحنات النقل</option>
+
+
+
 
 
               </select>
@@ -364,6 +459,58 @@
       </div>
     </div>
 
+    <!-- ========== PANEL: UPLOAD (HIDDEN BY DEFAULT) ========== -->
+    <div class="panel" id="panel-upload">
+      <div class="section-card">
+        <div class="section-card-header">
+          <h3>⬆️ رفع صور من جهازك (نظام قديم)</h3>
+        </div>
+        <div class="section-card-body">
+          <form action="{{ route('admin.images.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="upload-zone" onclick="document.getElementById('fileInputMain').click()">
+              <div class="upload-icon">📁</div>
+              <h4>اضغط للاختيار</h4>
+              <input type="file" id="fileInputMain" name="image" accept="image/*" style="display:none" onchange="previewFileMain(this)">
+            </div>
+            <div class="form-group" style="margin-top:20px">
+              <label class="form-label">القسم</label>
+              <select name="section" required class="form-control">
+                @foreach($sectionLabels as $k => $v)
+                  <option value="{{ $k }}">{{ $v }}</option>
+                @endforeach
+              </select>
+            </div>
+            <button type="submit" class="btn btn-success" style="width:100%">✅ رفع الآن</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PANEL: URL (HIDDEN BY DEFAULT) ========== -->
+    <div class="panel" id="panel-url">
+      <div class="section-card">
+        <div class="section-card-header">
+          <h3>🔗 إضافة برابط (نظام قديم)</h3>
+        </div>
+        <div class="section-card-body">
+          <form action="{{ route('admin.images.store') }}" method="POST">
+            @csrf
+            <input type="hidden" name="is_url" value="1">
+            <div class="url-input-row">
+              <input type="text" name="url" placeholder="https://..." required class="form-control">
+              <select name="section" required class="form-control">
+                @foreach($sectionLabels as $k => $v)
+                  <option value="{{ $k }}">{{ $v }}</option>
+                @endforeach
+              </select>
+              <button type="submit" class="btn btn-primary">✅ تطبيق</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
   </div><!-- /content -->
 </div><!-- /main -->
 
@@ -407,6 +554,29 @@
           <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=100&q=70" style="width:80px;height:60px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid transparent;transition:.2s" onclick="selectSuggestion('https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80',this)" alt="">
           <img src="https://images.unsplash.com/photo-1464082354059-27db6ce50048?w=100&q=70" style="width:80px;height:60px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid transparent;transition:.2s" onclick="selectSuggestion('https://images.unsplash.com/photo-1464082354059-27db6ce50048?w=800&q=80',this)" alt="">
         </div>
+      </div>
+      <div class="form-group" style="margin-top:15px">
+        <label class="form-label">نقل إلى قسم آخر (اختياري)</label>
+        <select id="modalSectionSelect" class="form-control">
+          <option value="">-- ابقَ في نفس القسم --</option>
+          <option value="hero">الخلفية الرئيسية (Hero)</option>
+          <option value="service-1">خدمة 1 — فك وتركيب</option>
+          <option value="service-2">خدمة 2 — شاحنة نقل</option>
+          <option value="service-3">خدمة 3 — نقل بضمان</option>
+          <option value="service-4">خدمة 4 — نقل آمن</option>
+          <option value="service-5">خدمة 5 — أسعار</option>
+          <option value="service-6">خدمة 6 — تغليف</option>
+          <option value="service-7">خدمة 7 — فك غرف</option>
+          <option value="service-8">خدمة 8 — بين المدن</option>
+          <option value="step-1">الخطوة ١ — تواصل</option>
+          <option value="step-2">الخطوة ٢ — الحجم</option>
+          <option value="step-3">الخطوة ٣ — معاينة</option>
+          <option value="step-4">الخطوة ٤ — تغليف</option>
+          <option value="step-5">الخطوة ٥ — نقل</option>
+          <option value="step-6">الخطوة ٦ — تركيب</option>
+          <option value="gallery-packing">معرض — التغليف بالكراتين</option>
+          <option value="gallery-trucks">معرض — شاحنات النقل</option>
+        </select>
       </div>
     </div>
     <div class="modal-footer">

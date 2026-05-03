@@ -107,13 +107,13 @@ class SiteImageSeeder extends Seeder
             ],
             // Gallery
             [
-                'section' => 'gallery',
+                'section' => 'gallery-trucks',
                 'title' => 'معرض — شاحنات النقل',
                 'location_hint' => 'معرض الأعمال — صورة كبيرة',
                 'url' => 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80',
             ],
             [
-                'section' => 'gallery',
+                'section' => 'gallery-packing',
                 'title' => 'معرض — التغليف بالكراتين',
                 'location_hint' => 'معرض الأعمال — صورة 2',
                 'url' => 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80',

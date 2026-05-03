@@ -26,7 +26,7 @@ class PageController extends Controller
             'hero' => $allImages->where('section', 'hero'),
             'services' => $allImages->filter(fn($img) => str_starts_with($img->section, 'service-'))->sortBy('section'),
             'steps' => $allImages->filter(fn($img) => str_starts_with($img->section, 'step-'))->sortBy('section'),
-            'gallery' => $allImages->where('section', 'gallery'),
+            'gallery' => $allImages->filter(fn($img) => str_starts_with($img->section, 'gallery-'))->sortBy('section'),
         ];
         
         return view('pages.' . $slug, compact('images'));
