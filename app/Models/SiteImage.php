@@ -10,7 +10,7 @@ class SiteImage extends Model
         'section',
         'title',
         'location_hint',
-        'path',
+        'pathwwwww',
         'url',
         'is_active',
     ];
