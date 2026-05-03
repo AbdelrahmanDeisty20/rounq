@@ -16,7 +16,7 @@ class ImageController extends Controller
             'total' => $images->count(),
             'hero' => $images->where('section', 'hero')->count(),
             'services' => $images->filter(fn($img) => str_starts_with($img->section, 'service-'))->count(),
-            'gallery' => $images->where('section', 'gallery')->count(),
+            'gallery' => $images->filter(fn($img) => str_starts_with($img->section, 'gallery'))->count(),
         ];
         
         return view('admin.images', compact('images', 'stats'));

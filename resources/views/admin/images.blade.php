@@ -221,7 +221,7 @@
         </div>
         <div class="section-card-body">
           <div class="img-grid" id="galleryGrid">
-            @foreach($images->where('section', 'gallery') as $image)
+            @foreach($images->filter(fn($img) => str_starts_with($img->section, 'gallery')) as $image)
             <div class="img-item active-img" id="gal-{{ $image->id }}">
               <img src="{{ $image->url }}" alt="">
               <div class="img-item-info">
@@ -276,12 +276,11 @@
                 <option value="step-4">الخطوة ٤ — تغليف</option>
                 <option value="step-5">الخطوة ١ — نقل</option>
                 <option value="step-6">الخطوة ٦ — تركيب</option>
-                <option value="gallery">إضافة لمعرض الأعمال</option>
+                <option value="gallery-packing">معرض — التغليف بالكراتين</option>
+                <option value="gallery-trucks">معرض — شاحنات النقل</option>
+
+
               </select>
-            </div>
-            <div class="form-group">
-                <label class="form-label">العنوان (اختياري)</label>
-                <input type="text" name="title" class="form-control" placeholder="مثلاً: صورة شاحنة نقل">
             </div>
             <button type="submit" class="btn btn-success" style="width:100%;margin-top:10px">✅ رفع الصورة الآن</button>
           </form>
@@ -319,7 +318,10 @@
                 <option value="step-4">الخطوة ٤ — تغليف</option>
                 <option value="step-5">الخطوة ٥ — نقل</option>
                 <option value="step-6">الخطوة ٦ — تركيب</option>
-                <option value="gallery">إضافة لمعرض الأعمال</option>
+                <option value="gallery-packing">معرض — التغليف بالكراتين</option>
+                <option value="gallery-trucks">معرض — شاحنات النقل</option>
+
+
               </select>
               <button type="submit" class="btn btn-primary">✅ تطبيق</button>
             </div>
