@@ -33,14 +33,14 @@ class ImageController extends Controller
 
         $section = $request->section;
 
-        // Find existing or create new (except for gallery where we might want many)
-        if ($section !== 'gallery') {
+        // Find existing or create new (except for gallery where we want many)
+        if (!str_starts_with($section, 'gallery')) {
             $image = SiteImage::where('section', $section)->first();
             if (!$image) {
                 $image = new SiteImage(['section' => $section]);
             }
         } else {
-            $image = new SiteImage(['section' => 'gallery']);
+            $image = new SiteImage(['section' => $section]);
         }
 
         if ($request->title) {
@@ -76,9 +76,27 @@ class ImageController extends Controller
 
     public function update(Request $request, SiteImage $image)
     {
-        // Reuse store logic for specific image ID update
-        $request->merge(['section' => $image->section]);
-        return $this->store($request);
+        if ($request->hasFile('image')) {
+            if ($image->path) {
+                Storage::disk('public')->delete($image->path);
+            }
+            $path = $request->file('image')->store('images', 'public');
+            $image->path = $path;
+        } elseif ($request->url) {
+            if ($image->path) {
+                Storage::disk('public')->delete($image->path);
+                $image->path = null;
+            }
+            $image->url = $request->url;
+        }
+
+        $image->save();
+
+        if ($request->ajax()) {
+            return response()->json(['success' => true, 'message' => 'تم تحديث الصورة بنجاح']);
+        }
+
+        return back()->with('success', 'تم تحديث الصورة بنجاح');
     }
 
     public function destroy(SiteImage $image)
