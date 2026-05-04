@@ -20,12 +20,12 @@ class SiteImageSeeder extends Seeder
                 'url' => 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=1400&q=80',
             ],
             // Services
-            // [
-            //     'section' => 'service-1',
-            //     'title' => 'نقل عفش مع الفك والتركيب',
-            //     'location_hint' => 'قسم الخدمات — كرت 1',
-            //     'url' => 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80',
-            // ],
+            [
+                'section' => 'service-1',
+                'title' => 'نقل عفش مع الفك والتركيب',
+                'location_hint' => 'قسم الخدمات — كرت 1',
+                'url' => 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80',
+            ],
             [
                 'section' => 'service-2',
                 'title' => 'نقل أثاث مع التحميل والتنزيل',
