@@ -50,12 +50,14 @@ class SiteImageSeeder extends Seeder
                 'location_hint' => 'قسم الخدمات — كرت 5',
                 'url' => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80',
             ],
+/*
             [
                 'section' => 'service-6',
                 'title' => 'تغليف الأثاث قبل النقل',
                 'location_hint' => 'قسم الخدمات — كرت 6',
                 'url' => 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&q=80',
             ],
+*/
             [
                 'section' => 'service-7',
                 'title' => 'فك وتركيب غرف النوم والمطابخ',
