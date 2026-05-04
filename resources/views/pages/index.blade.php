@@ -1288,6 +1288,6 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
-<script src="image-loader.js"></script></body>
+</body>
 </html>
 

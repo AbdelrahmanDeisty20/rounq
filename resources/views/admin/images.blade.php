@@ -160,6 +160,7 @@
           </div>
           <div class="card-info">
             <h4>{{ $sectionLabels[strtolower($image->section)] ?? $image->title ?? 'صورة موقع' }}</h4>
+            <div class="loc">🔑 ID: <span style="color:var(--red); font-weight:bold">{{ $image->section }}</span></div>
             <div class="loc">📍 {{ $image->location_hint ?? 'موقع غير محدد' }}</div>
             <div class="card-actions">
               <button class="btn btn-primary btn-sm" onclick="openChangeModal('{{ $image->id }}', '{{ $image->title }}', '{{ $image->url }}')">✏️ تغيير</button>
