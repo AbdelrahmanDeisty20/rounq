@@ -1242,6 +1242,7 @@ footer {
     <div class="footer-bottom">
       <p>© 2025 <strong>الأسطورة رونق قلب الخليج</strong> - جميع الحقوق محفوظة</p>
       <p>{{ $settings['address'] ?? 'القصيم، المملكة العربية السعودية 🇸🇦' }}</p>
+      <p>تم إنشاؤه بواسطة <a href="https://fourthpyramidagcy.com/" target="_blank" style="color: var(--gold-light); text-decoration: underline;">Fourth Pyramid Agency</a></p>
     </div>
   </div>
 </footer>

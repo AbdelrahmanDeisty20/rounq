@@ -189,7 +189,7 @@ footer a{color:#F1C40F}
 <div class="container">
   <p>🚛 <strong>الأسطورة رونق قلب الخليج</strong> | نقل عفش من القصيم للرياض</p>
   <p>📞 <a href="tel:+966500000000">0500000000</a> | القصيم، المملكة العربية السعودية</p>
-  <p style="margin-top:16px;opacity:.5;font-size:13px">© 2025 جميع الحقوق محفوظة | <a href="index">الصفحة الرئيسية</a></p>
+  <p style="margin-top:16px;opacity:.5;font-size:13px">© 2025 جميع الحقوق محفوظة | <a href="index">الصفحة الرئيسية</a></p><p style="margin-top:5px;opacity:.8;font-size:12px">تم إنشاؤه بواسطة <a href="https://fourthpyramidagcy.com/" target="_blank" style="color: #F1C40F; text-decoration: underline;">Fourth Pyramid Agency</a></p>
 </div>
 </footer>
 
