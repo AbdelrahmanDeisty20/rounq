@@ -61,7 +61,11 @@
   <div class="sidebar-section">
     <div class="sidebar-section-title">إدارة الصور</div>
     <ul class="sidebar-nav">
-      <li><a href="#" class="active" onclick="switchTab('current', this)" id="nav-current"><span class="nav-icon">🖼️</span> الصور الحالية <span class="nav-badge">{{ $stats['total'] }}</span></a></li>
+      <li><a href="{{ route('admin.images.index') }}" class="active" onclick="switchTab('current', this)" id="nav-current"><span class="nav-icon">🖼️</span> الصور الحالية <span class="nav-badge">{{ $stats['total'] }}</span></a></li>
+      @role('admin')
+      <li><a href="{{ route('admin.users.index') }}"><span class="nav-icon">👥</span> إدارة المستخدمين</a></li>
+      <li><a href="{{ route('admin.settings.index') }}"><span class="nav-icon">📞</span> أرقام التواصل</a></li>
+      @endrole
       <li><a href="#" onclick="switchTab('hero', this)" id="nav-hero"><span class="nav-icon">🌟</span> صورة الخلفية الرئيسية</a></li>
       <li><a href="#" onclick="switchTab('services', this)" id="nav-services"><span class="nav-icon">🛋️</span> صور الخدمات</a></li>
       <li><a href="#" onclick="switchTab('steps', this)" id="nav-steps"><span class="nav-icon">🔢</span> صور خطوات العمل</a></li>
@@ -69,8 +73,10 @@
   <div class="sidebar-section">
     <div class="sidebar-section-title">أدوات إضافية</div>
     <ul class="sidebar-nav">
+      @can('add images')
       <li><a href="#" onclick="switchTab('upload', this)" id="nav-upload"><span class="nav-icon">⬆️</span> رفع صور جديدة</a></li>
       <li><a href="#" onclick="switchTab('url', this)" id="nav-url"><span class="nav-icon">🔗</span> إضافة صور برابط</a></li>
+      @endcan
     </ul>
   </div>
 
@@ -107,7 +113,9 @@
     </div>
     <div class="topbar-actions">
       <button class="btn btn-outline" onclick="location.reload()">🔄 تحديث الصفحة</button>
+      @can('add images')
       <button class="btn btn-primary" onclick="switchTab('upload', null)">⬆️ رفع صورة جديدة</button>
+      @endcan
     </div>
   </div>
 
@@ -141,8 +149,10 @@
       <button class="tab-btn" onclick="switchTab('services', null)" id="tab-services">🛋️ الخدمات</button>
       <button class="tab-btn" onclick="switchTab('steps', null)" id="tab-steps">🔢 الخطوات</button>
       <button class="tab-btn" onclick="switchTab('gallery', null)" id="tab-gallery">📸 المعرض</button>
+      @can('add images')
       <button class="tab-btn" onclick="switchTab('upload', null)" id="tab-upload">⬆️ رفع صورة</button>
       <button class="tab-btn" onclick="switchTab('url', null)" id="tab-url">🔗 إضافة برابط</button>
+      @endcan
     </div>
 
     <!-- ========== PANEL: CURRENT IMAGES ========== -->
@@ -163,9 +173,13 @@
             <div class="loc">🔑 ID: <span style="color:var(--red); font-weight:bold">{{ $image->section }}</span></div>
             <div class="loc">📍 {{ $image->location_hint ?? 'موقع غير محدد' }}</div>
             <div class="card-actions">
+              @can('edit images')
               <button class="btn btn-primary btn-sm" onclick="openChangeModal('{{ $image->id }}', '{{ $image->title }}', '{{ $image->url }}')">✏️ تغيير</button>
+              @endcan
               <button class="btn btn-outline btn-sm" onclick="previewImg('{{ $image->url }}')">👁️ معاينة</button>
+              @can('delete images')
               <button class="btn btn-danger btn-sm" onclick="deleteImage('{{ $image->id }}')">🗑️ حذف</button>
+              @endcan
             </div>
           </div>
         </div>

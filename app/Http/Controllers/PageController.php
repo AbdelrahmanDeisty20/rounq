@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\SiteImage;
+use App\Models\SiteSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -29,6 +30,8 @@ class PageController extends Controller
             'gallery' => $allImages->filter(fn($img) => str_starts_with($img->section, 'gallery-'))->sortBy('section'),
         ];
         
-        return view('pages.' . $slug, compact('images'));
+        $settings = SiteSetting::all()->pluck('value', 'key');
+
+        return view('pages.' . $slug, compact('images', 'settings'));
     }
 }

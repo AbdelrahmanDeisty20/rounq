@@ -14,7 +14,7 @@
   "@@type": "MovingCompany",
   "name": "الأسطورة رونق قلب الخليج",
   "description": "شركة نقل عفش متخصصة من القصيم إلى جميع مدن المملكة",
-  "telephone": "+966500000000",
+  "telephone": "{{ $settings['phone'] ?? '+966500000000' }}",
   "address": {
     "@@type": "PostalAddress",
     "addressLocality": "القصيم",
@@ -872,10 +872,10 @@ footer {
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="container">
-    <div>🏠 القصيم، المملكة العربية السعودية</div>
+    <div>🏠 {{ $settings['address'] ?? 'القصيم، المملكة العربية السعودية' }}</div>
     <div class="contact-info">
-      <span>📞 <a href="tel:+966500000000">0500000000</a></span>
-      <span>💬 <a href="https://wa.me/966500000000">واتساب مباشر</a></span>
+      <span>📞 <a href="tel:{{ $settings['phone'] ?? '0500000000' }}">{{ $settings['phone'] ?? '0500000000' }}</a></span>
+      <span>💬 <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}">واتساب مباشر</a></span>
       <span>⏰ متاحون 24/7</span>
     </div>
   </div>
@@ -903,8 +903,8 @@ footer {
         </ul>
       </nav>
       <div class="header-cta">
-        <a href="tel:+966500000000" class="btn-call">📞 <span>اتصل الآن</span></a>
-        <a href="https://wa.me/966500000000" class="btn-whatsapp">💬 <span>واتساب</span></a>
+        <a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="btn-call">📞 <span>اتصل الآن</span></a>
+        <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="btn-whatsapp">💬 <span>واتساب</span></a>
         <div class="hamburger" onclick="toggleNav()">
           <span></span><span></span><span></span>
         </div>
@@ -922,8 +922,8 @@ footer {
       <h1>شركة نقل عفش <span>مع الفك والتركيب</span> والتغليف</h1>
       <p>نقدم خدمات نقل عفش وأثاث احترافية من القصيم إلى جميع مدن المملكة، مع فريق متخصص في الفك والتركيب والتغليف والتحميل والتنزيل، وضمان النقل الآمن للأثاث.</p>
       <div class="hero-btns">
-        <a href="tel:+966500000000" class="btn-primary">📞 اطلب الخدمة الآن</a>
-        <a href="https://wa.me/966500000000" class="btn-secondary">💬 تواصل واتساب</a>
+        <a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="btn-primary">📞 اطلب الخدمة الآن</a>
+        <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="btn-secondary">💬 تواصل واتساب</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><div class="num">+500</div><div class="label">عميل سعيد</div></div>
@@ -1185,8 +1185,8 @@ footer {
     <h2>تحتاج نقل عفش آمن وسريع؟</h2>
     <p>تواصل معنا الآن واحصل على أفضل خدمة نقل عفش من القصيم إلى جميع مدن المملكة بأسعار مناسبة وضمان كامل.</p>
     <div class="cta-btns">
-      <a href="tel:+966500000000" class="btn-white">📞 اتصل الآن</a>
-      <a href="https://wa.me/966500000000" class="btn-wh-green">💬 راسلنا واتساب</a>
+      <a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="btn-white">📞 اتصل الآن</a>
+      <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="btn-wh-green">💬 راسلنا واتساب</a>
     </div>
   </div>
 </section>
@@ -1201,9 +1201,9 @@ footer {
         </div>
         <p class="brand-desc">شركة نقل عفش متخصصة من القصيم إلى جميع مدن المملكة. نقدم خدمات احترافية بأسعار مناسبة مع ضمان سلامة الأثاث وراحة البال.</p>
         <div class="footer-contact">
-          <a href="tel:+966500000000">📞 0500000000</a>
-          <a href="https://wa.me/966500000000">💬 واتساب مباشر</a>
-          <a href="#">📍 القصيم، المملكة العربية السعودية</a>
+          <a href="tel:{{ $settings['phone'] ?? '0500000000' }}">📞 {{ $settings['phone'] ?? '0500000000' }}</a>
+          <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}">💬 واتساب مباشر</a>
+          <a href="#">📍 {{ $settings['address'] ?? 'القصيم، المملكة العربية السعودية' }}</a>
         </div>
       </div>
       <div class="footer-col">
@@ -1241,14 +1241,14 @@ footer {
     </div>
     <div class="footer-bottom">
       <p>© 2025 <strong>الأسطورة رونق قلب الخليج</strong> - جميع الحقوق محفوظة</p>
-      <p>القصيم، المملكة العربية السعودية 🇸🇦</p>
+      <p>{{ $settings['address'] ?? 'القصيم، المملكة العربية السعودية 🇸🇦' }}</p>
     </div>
   </div>
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://wa.me/966500000000" class="float-wa" title="واتساب">💬</a>
-<a href="tel:+966500000000" class="float-call" title="اتصال مباشر">📞</a>
+<a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="float-wa" title="واتساب">💬</a>
+<a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="float-call" title="اتصال مباشر">📞</a>
 
 <script>
 // Mobile Nav

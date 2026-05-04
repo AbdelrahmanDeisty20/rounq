@@ -53,13 +53,9 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // Auto assign 'admin' role to the first user, 'manager' to others?
-        // For simplicity now, just assign 'admin' to everyone if it exists
-        $adminRole = Role::where('name', 'admin')->first();
-        if (!$adminRole) {
-            $adminRole = Role::create(['name' => 'admin']);
-        }
-        $user->assignRole($adminRole);
+        // Assign 'user' role by default for new registrations
+        $userRole = Role::firstOrCreate(['name' => 'user']);
+        $user->assignRole($userRole);
 
         Auth::login($user);
 
