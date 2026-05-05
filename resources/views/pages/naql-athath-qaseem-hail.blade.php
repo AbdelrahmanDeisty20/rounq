@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="ar" dir="rtl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="نقل أثاث من القصيم لحائل - الأسطورة رونق قلب الخليج. فك وتركيب وتغليف وضمان. 0500000000">
-<title>نقل أثاث من القصيم لحائل | الأسطورة رونق قلب الخليج</title>
+<meta name="description" content="من القصيم لحائل - الأسطورة رونق قلب الخليج. فك وتركيب وتغليف وضمان. 0500000000">
+<title>من القصيم لحائل | الأسطورة رونق قلب الخليج</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}:root{--r:#C0392B;--b:#1A3A6B;--g:#D4A017}
@@ -48,7 +48,7 @@ footer a{color:#F1C40F}
   <div class="btns"><a href="tel:+966500000000" class="br">📞 اتصل</a><a href="https://wa.me/966500000000" class="bg2">💬 واتساب</a></div>
 </div></div></header>
 <div class="hero"><div class="con">
-  <h1>نقل أثاث من القصيم لحائل</h1>
+  <h1>من القصيم لحائل</h1>
   <p>خدمة نقل متكاملة تشمل الفك والتغليف والنقل والتركيب بأسعار مناسبة وضمان على سلامة أثاثك.</p>
   <div class="hbtns">
     <a href="tel:+966500000000" class="bp">📞 اتصل الآن</a>
@@ -56,11 +56,11 @@ footer a{color:#F1C40F}
   </div>
 </div></div>
 <section><div class="con">
-  <span class="tg">نقل أثاث القصيم حائل</span>
-  <h2>نقل أثاث من القصيم لحائل</h2>
+  <span class="tg">القصيم حائل</span>
+  <h2>من القصيم لحائل</h2>
   <div class="dv"></div>
   <div class="txt">
-    <p>تقدم شركة <strong>الأسطورة رونق قلب الخليج</strong> خدمة <strong>نقل أثاث من القصيم لحائل</strong> بأعلى معايير الجودة. متخصصون في نقل العفش والأثاث من القصيم إلى حائل مع ضمان كامل.</p>
+    <p>تقدم <strong>الأسطورة رونق قلب الخليج</strong> خدمة <strong>من القصيم لحائل</strong> بأعلى معايير الجودة. متخصصون في نقل العفش والأثاث من القصيم إلى حائل مع ضمان كامل.</p>
     <p>فريقنا يتعامل مع جميع أنواع الأثاث بعناية: فك دقيق، تغليف احترافي بأجود المواد، تحميل آمن في شاحناتنا المجهزة، وصولاً إلى حائل حيث يتم التنزيل والتركيب الكامل.</p>
     <h3>لماذا تختارنا للنقل إلى حائل؟</h3>
     <p>خبرة طويلة في خطوط النقل بين القصيم وحائل، أسطول شاحنات حديث، فريق مدرب، وأسعار تنافسية شفافة بلا رسوم مخفية. اتصل الآن واحصل على عرض سعر مجاني.</p>
@@ -104,14 +104,14 @@ footer a{color:#F1C40F}
 </div></section>
 <div class="cta"><div class="con">
   <h2>جاهز للنقل إلى حائل؟</h2>
-  <p>تواصل الآن واحصل على أفضل خدمة بضمان كامل</p>
+  <p>تواصل الآن واحصل على خدمة بضمان كامل</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
     <a href="tel:+966500000000" class="bp" style="background:#fff;color:var(--r)">📞 اتصل الآن</a>
     <a href="https://wa.me/966500000000" class="bw">💬 واتساب</a>
   </div>
 </div></div>
 <footer><div class="con">
-  <p>🚛 <strong>الأسطورة رونق قلب الخليج</strong> | نقل أثاث من القصيم لحائل</p>
+  <p>🚛 <strong>الأسطورة رونق قلب الخليج</strong> | من القصيم لحائل</p>
   <p>📞 <a href="tel:+966500000000">0500000000</a> | القصيم، المملكة العربية السعودية</p>
   <p style="margin-top:10px;opacity:.5;font-size:12px">© 2025 جميع الحقوق محفوظة | <a href="index">الرئيسية</a></p><p style="margin-top:5px;opacity:.8;font-size:12px">Designed and Developed by <a href="https://fourthpyramidagcy.com/" target="_blank" style="color: #F1C40F; text-decoration: underline;">Fourth Pyramid Agency</a></p>
 </div></footer>
@@ -119,4 +119,7 @@ footer a{color:#F1C40F}
 <a href="tel:+966500000000" class="fc2">📞</a>
 <script>function tf(el){const i=el.parentElement,o=i.classList.contains('op');document.querySelectorAll('.fi2').forEach(x=>x.classList.remove('op'));if(!o)i.classList.add('op');}</script>
 <script src="image-loader.js"></script></body></html>
+
+
+
 

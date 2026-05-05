@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="الأسطورة رونق قلب الخليج - أفضل شركة نقل عفش من القصيم الى كل مدن المملكة مع خدمات الفك والتركيب والتغليف والتحميل والتنزيل. نقل عفش من القصيم الى جميع مدن المملكة بضمان وأسعار مناسبة.">
-<meta name="keywords" content="نقل عفش القصيم, نقل أثاث القصيم, شركة نقل عفش, القصيم الرياض, نقل عفش بالضمان">
-<title>الأسطورة رونق قلب الخليج | أفضل شركة نقل عفش من القصيم الى كل مدن المملكة</title>
+<meta name="description" content="الأسطورة رونق قلب الخليج - من القصيم الى كل مدن المملكة مع خدمات الفك والتركيب والتغليف والتحميل والتنزيل. من القصيم الى جميع مدن المملكة بضمان وأسعار مناسبة.">
+<meta name="keywords" content="القصيم, من القصيم الى كل مدن المملكة, القصيم الرياض, بالضمان">
+<title>الأسطورة رونق قلب الخليج | من القصيم الى كل مدن المملكة</title>
 
 <!-- Schema: Local Business -->
 <script type="application/ld+json">
@@ -13,7 +13,7 @@
   "@@context": "https://schema.org",
   "@@type": "MovingCompany",
   "name": "الأسطورة رونق قلب الخليج",
-  "description": "شركة نقل عفش متخصصة من القصيم إلى جميع مدن المملكة",
+  "description": "من القصيم إلى جميع مدن المملكة",
   "telephone": "{{ $settings['phone'] ?? '+966500000000' }}",
   "address": {
     "@@type": "PostalAddress",
@@ -33,7 +33,7 @@
   "mainEntity": [
     {
       "@@type": "Question",
-      "name": "ما هي مناطق خدمة شركة نقل العفش؟",
+      "name": "ما هي مناطق الخدمة؟",
       "acceptedAnswer": {
         "@@type": "Answer",
         "text": "نخدم القصيم وجميع مدن المملكة العربية السعودية بما فيها الرياض وجدة والدمام ومكة والمدينة وحائل والطائف."
@@ -41,10 +41,10 @@
     },
     {
       "@@type": "Question",
-      "name": "هل تقدمون ضمان على النقل؟",
+      "name": "هل تقدمون ضمان؟",
       "acceptedAnswer": {
         "@@type": "Answer",
-        "text": "نعم، نقدم ضمان كامل على سلامة الأثاث أثناء النقل مع تغليف احترافي."
+        "text": "نعم، نقدم ضمان كامل على سلامة الأثاث مع تغليف احترافي."
       }
     }
   ]
@@ -919,8 +919,8 @@ footer {
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">⭐ الأسطورة رونق قلب الخليج</div>
-      <h1>شركة نقل عفش <span>مع الفك والتركيب</span> والتغليف</h1>
-      <p>نقدم خدمات نقل عفش وأثاث احترافية من القصيم إلى جميع مدن المملكة، مع فريق متخصص في الفك والتركيب والتغليف والتحميل والتنزيل، وضمان النقل الآمن للأثاث.</p>
+      <h1>من القصيم الى كل مدن المملكة</h1>
+      <p>نقدم خدمات احترافية من القصيم إلى جميع مدن المملكة، مع فريق متخصص في الفك والتركيب والتغليف والتحميل والتنزيل، وضمان الأمان للأثاث.</p>
       <div class="hero-btns">
         <a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="btn-primary">📞 اطلب الخدمة الآن</a>
         <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="btn-secondary">💬 تواصل واتساب</a>
@@ -940,8 +940,8 @@ footer {
   <div class="container">
     <div class="section-header">
       <span class="section-tag">خدماتنا</span>
-      <h2>خدمات نقل عفش شاملة ومتكاملة</h2>
-      <p>نقدم جميع خدمات النقل تحت سقف واحد بأفضل الأسعار وأعلى معايير الجودة</p>
+      <h2>خدمات شاملة ومتكاملة</h2>
+      <p>نقدم جميع خدمات النقل تحت سقف واحد بأسعار مناسبة وأعلى معايير الجودة</p>
       <div class="divider"></div>
     </div>
     <div class="services-grid">
@@ -961,7 +961,7 @@ footer {
           'نضمن وصول أثاثك سليماً 100% مع تأمين كامل على البضائع خلال رحلة النقل.',
           'سيارات مجهزة بأحدث الأنظمة لتأمين الأثاث أثناء النقل مع كوادر مدربة ومحترفة.',
           'أسعار تنافسية لا تجد مثيلها في المنطقة مع الحفاظ على أعلى مستويات الخدمة والجودة.',
-          'نستخدم أفضل مواد التغليف من كراتين وبلاستيك فقاعي وفلين لحماية كل قطعة.',
+          'نستخدم مواد التغليف من كراتين وبلاستيك فقاعي وفلين لحماية كل قطعة.',
           'فنيون متخصصون في فك وتركيب جميع أنواع الأثاث بما فيها غرف النوم والمطابخ والمكاتب.',
           'نغطي جميع مدن المملكة من القصيم إلى الرياض وجدة والدمام ومكة والمدينة وحائل والطائف.'
         ][$loop->index] ?? '' }}</p>
@@ -977,7 +977,7 @@ footer {
     <div class="section-header">
       <span class="section-tag">مناطق التغطية</span>
       <h2>المدن التي نخدمها في المملكة</h2>
-      <p>نغطي القصيم وأهم مدن المملكة بخدمة نقل عفش احترافية وبضمان كامل</p>
+      <p>نغطي القصيم وأهم مدن المملكة بخدمة احترافية وبضمان كامل</p>
       <div class="divider"></div>
     </div>
     <div class="seo-grid">
@@ -993,6 +993,8 @@ footer {
               ['name' => 'المدينة المنورة', 'slug' => 'naql-afsh-qaseem-madinah', 'icon' => '🕌'],
               ['name' => 'حائل', 'slug' => 'naql-afsh-qaseem-hail', 'icon' => '⛰️'],
               ['name' => 'الطائف', 'slug' => 'naql-afsh-qaseem-taif', 'icon' => '🌹'],
+              ['name' => 'ينبع', 'slug' => 'naql-afsh-qaseem-yanbu', 'icon' => '⚓'],
+              ['name' => 'سكاكا', 'slug' => 'naql-afsh-qaseem-sakaka', 'icon' => '🏰'],
             ];
           @endphp
           @foreach($cities as $city)
@@ -1107,7 +1109,7 @@ footer {
       </div>
       <div class="review-card fade-up">
         <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">أسعار مناسبة والخدمة فوق التوقعات. التغليف كان ممتاز وما كسرت أي قطعة. أنصح بهم بشدة لكل من يريد نقل عفش بالقصيم.</p>
+        <p class="review-text">أسعار مناسبة والخدمة فوق التوقعات. التغليف كان ممتاز وما كسرت أي قطعة. أنصح بهم بشدة لكل من يريد بالقصيم.</p>
         <div class="reviewer">
           <div class="reviewer-avatar" style="background: var(--red);">م</div>
           <div class="reviewer-info">
@@ -1129,7 +1131,7 @@ footer {
       </div>
       <div class="review-card fade-up">
         <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">جربت شركات كثيرة وهذه الأفضل من حيث الأمانة والسرعة والسعر. فريق العمل محترم ومؤدب. الله يوفقهم.</p>
+        <p class="review-text">جربت شركات كثيرة وهذه المن حيث الأمانة والسرعة والسعر. فريق العمل محترم ومؤدب. الله يوفقهم.</p>
         <div class="reviewer">
           <div class="reviewer-avatar" style="background: #27AE60;">ع</div>
           <div class="reviewer-info">
@@ -1152,12 +1154,12 @@ footer {
     </div>
     <div class="faq-wrap">
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">ما هي مناطق خدمة شركة نقل العفش بالقصيم؟ <span class="arrow">▶</span></div>
+        <div class="faq-q" onclick="toggleFaq(this)">ما هي مناطق خدمة نقل العفش من القصيم الى كل مدن المملكة؟ <span class="arrow">▶</span></div>
         <div class="faq-a">نخدم القصيم وجميع مدن المملكة العربية السعودية بما فيها الرياض وجدة والدمام ومكة المكرمة والمدينة المنورة وحائل والطائف وغيرها من المدن.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">هل تقدمون ضمان على النقل؟ <span class="arrow">▶</span></div>
-        <div class="faq-a">نعم، نقدم ضمان كامل على سلامة الأثاث أثناء النقل. نستخدم أفضل مواد التغليف للحفاظ على أثاثك من أي ضرر.</div>
+        <div class="faq-a">نعم، نقدم ضمان كامل على سلامة الأثاث أثناء النقل. نستخدم مواد التغليف للحفاظ على أثاثك من أي ضرر.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">كم تستغرق عملية نقل العفش من القصيم الى الرياض؟ <span class="arrow">▶</span></div>
@@ -1182,8 +1184,8 @@ footer {
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="container">
-    <h2>تحتاج نقل عفش آمن وسريع؟</h2>
-    <p>تواصل معنا الآن واحصل على أفضل خدمة نقل عفش من القصيم إلى جميع مدن المملكة بأسعار مناسبة وضمان كامل.</p>
+    <h2>تحتاج آمن وسريع؟</h2>
+    <p>تواصل معنا الآن واحصل على خدمة من القصيم إلى جميع مدن المملكة بأسعار مناسبة وضمان كامل.</p>
     <div class="cta-btns">
       <a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="btn-white">📞 اتصل الآن</a>
       <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="btn-wh-green">💬 راسلنا واتساب</a>
@@ -1199,7 +1201,7 @@ footer {
         <div class="logo-text">
           <div class="brand-name" style="color: white; font-size: 20px; font-weight: 900; margin-bottom: 8px;">🚛 الأسطورة رونق قلب الخليج</div>
         </div>
-        <p class="brand-desc">شركة نقل عفش متخصصة من القصيم إلى جميع مدن المملكة. نقدم خدمات احترافية بأسعار مناسبة مع ضمان سلامة الأثاث وراحة البال.</p>
+        <p class="brand-desc">من القصيم إلى جميع مدن المملكة. نقدم خدمات احترافية بأسعار مناسبة مع ضمان سلامة الأثاث وراحة البال.</p>
         <div class="footer-contact">
           <a href="tel:{{ $settings['phone'] ?? '0500000000' }}">📞 {{ $settings['phone'] ?? '0500000000' }}</a>
           <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}">💬 واتساب مباشر</a>
@@ -1209,7 +1211,7 @@ footer {
       <div class="footer-col">
         <h4>خدماتنا</h4>
         <ul>
-          <li><a href="#">نقل عفش مع الفك والتركيب</a></li>
+          <li><a href="#">مع الفك والتركيب</a></li>
           <li><a href="#">تغليف الأثاث</a></li>
           <li><a href="#">نقل بالضمان</a></li>
           <li><a href="#">تحميل وتنزيل</a></li>
@@ -1291,4 +1293,6 @@ window.addEventListener('scroll', () => {
 </script>
 </body>
 </html>
+
+
 

@@ -625,7 +625,7 @@ body {
             <div class="img-badge">🛋️ خدمة 1</div>
           </div>
           <div class="card-info">
-            <h4>نقل عفش مع الفك والتركيب</h4>
+            <h4>مع الفك والتركيب</h4>
             <div class="loc">📍 قسم الخدمات — كرت 1</div>
             <div class="card-actions">
               <button class="btn btn-primary btn-sm" onclick="openChangeModal('service-1', 'خدمة 1: فك وتركيب', 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80')">✏️ تغيير</button>
@@ -640,7 +640,7 @@ body {
             <div class="img-badge">🛋️ خدمة 2</div>
           </div>
           <div class="card-info">
-            <h4>نقل أثاث مع التحميل والتنزيل</h4>
+            <h4>مع التحميل والتنزيل</h4>
             <div class="loc">📍 قسم الخدمات — كرت 2</div>
             <div class="card-actions">
               <button class="btn btn-primary btn-sm" onclick="openChangeModal('service-2', 'خدمة 2: شاحنة', 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&q=80')">✏️ تغيير</button>
@@ -655,7 +655,7 @@ body {
             <div class="img-badge">🛋️ خدمة 3</div>
           </div>
           <div class="card-info">
-            <h4>نقل عفش بالضمان</h4>
+            <h4>بالضمان</h4>
             <div class="loc">📍 قسم الخدمات — كرت 3</div>
             <div class="card-actions">
               <button class="btn btn-primary btn-sm" onclick="openChangeModal('service-3', 'خدمة 3: ضمان', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80')">✏️ تغيير</button>
@@ -1437,4 +1437,7 @@ document.getElementById('changeModal').addEventListener('click', function(e) {
 </script>
 <script src="image-loader.js"></script></body>
 </html>
+
+
+
 
