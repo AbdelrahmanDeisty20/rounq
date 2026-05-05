@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="من القصيم الى الرياض - الأسطورة رونق قلب الخليج. خدمة احترافية مع الفك والتركيب والتغليف بأسعار مناسبة وضمان كامل. اتصل الآن 0500000000">
+<meta name="description" content="من القصيم الى الرياض - الأسطورة رونق قلب الخليج. خدمة احترافية مع الفك والتركيب والتغليف بأسعار مناسبة وضمان كامل. اتصل الآن 0579796006">
 <title>من القصيم الى الرياض | الأسطورة رونق قلب الخليج</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@@400;600;700;900&display=swap" rel="stylesheet">
@@ -89,8 +89,8 @@ footer a{color:#F1C40F}
 <div class="hdr">
   <a href="index" class="logo-txt">🚛 الأسطورة <span>رونق</span> قلب الخليج</a>
   <div class="hdr-btns">
-    <a href="tel:+966500000000" class="btn-r">📞 اتصل الآن</a>
-    <a href="https://wa.me/966500000000" class="btn-g">💬 واتساب</a>
+    <a href="tel:+966579796006" class="btn-r">📞 اتصل الآن</a>
+    <a href="https://wa.me/966579796006" class="btn-g">💬 واتساب</a>
   </div>
 </div>
 </div>
@@ -101,8 +101,8 @@ footer a{color:#F1C40F}
   <h1>من <span>القصيم الى الرياض</span></h1>
   <p>خدمة احترافية من القصيم إلى الرياض مع الفك والتركيب والتغليف الكامل. فريق متخصص وسيارات مجهزة وضمان على سلامة الأثاث طوال الرحلة.</p>
   <div class="hero-btns">
-    <a href="tel:+966500000000" class="btn-primary">📞 اتصل الآن</a>
-    <a href="https://wa.me/966500000000" class="btn-wa">💬 واتساب مباشر</a>
+    <a href="tel:+966579796006" class="btn-primary">📞 اتصل الآن</a>
+    <a href="https://wa.me/966579796006" class="btn-wa">💬 واتساب مباشر</a>
   </div>
 </div>
 </section>
@@ -151,7 +151,7 @@ footer a{color:#F1C40F}
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">كم تستغرق رحلة نقل العفش من القصيم الى الرياض؟ <span class="arr">▶</span></div><div class="faq-a">عادةً يوماً واحداً. نبدأ بالتغليف والتحميل في الصباح الباكر وننتهي من التسليم والتركيب في الرياض مساءً.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">هل أسعاركم تشمل الفك والتركيب؟ <span class="arr">▶</span></div><div class="faq-a">نعم، أسعارنا شاملة لجميع مراحل الخدمة: الفك والتغليف والتحميل والنقل والتنزيل والتركيب.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">هل يوجد ضمان على سلامة الأثاث؟ <span class="arr">▶</span></div><div class="faq-a">نعم، نقدم ضماناً كاملاً على سلامة أثاثك من لحظة الاستلام من منزلك في القصيم حتى تسليمه في الرياض.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">كيف أحصل على عرض سعر؟ <span class="arr">▶</span></div><div class="faq-a">فقط تواصل معنا عبر الاتصال أو الواتساب على الرقم 0500000000 وسنقدم لك عرض سعر مجاني فوري.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">كيف أحصل على عرض سعر؟ <span class="arr">▶</span></div><div class="faq-a">فقط تواصل معنا عبر الاتصال أو الواتساب على الرقم 0579796006 وسنقدم لك عرض سعر مجاني فوري.</div></div>
   </div>
 </div>
 </section>
@@ -180,8 +180,8 @@ footer a{color:#F1C40F}
   <h2>جاهز لك من القصيم الى الرياض؟</h2>
   <p>تواصل معنا الآن واحصل على عرض سعر مجاني وخدمة احترافية بضمان</p>
   <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-    <a href="tel:+966500000000" class="btn-primary" style="background:#fff;color:var(--red)">📞 اتصل الآن</a>
-    <a href="https://wa.me/966500000000" class="btn-wa">💬 راسلنا واتساب</a>
+    <a href="tel:+966579796006" class="btn-primary" style="background:#fff;color:var(--red)">📞 اتصل الآن</a>
+    <a href="https://wa.me/966579796006" class="btn-wa">💬 راسلنا واتساب</a>
   </div>
 </div>
 </div>
@@ -189,13 +189,13 @@ footer a{color:#F1C40F}
 <footer>
 <div class="container">
   <p>🚛 <strong>الأسطورة رونق قلب الخليج</strong> | من القصيم الى الرياض</p>
-  <p>📞 <a href="tel:+966500000000">0500000000</a> | القصيم، المملكة العربية السعودية</p>
+  <p>📞 <a href="tel:+966579796006">0579796006</a> | القصيم، المملكة العربية السعودية</p>
   <p style="margin-top:16px;opacity:.5;font-size:13px">© 2025 جميع الحقوق محفوظة | <a href="index">الصفحة الرئيسية</a></p><p style="margin-top:5px;opacity:.8;font-size:12px">Designed and Developed by <a href="https://fourthpyramidagcy.com/" target="_blank" style="color: #F1C40F; text-decoration: underline;">Fourth Pyramid Agency</a></p>
 </div>
 </footer>
 
-<a href="https://wa.me/966500000000" class="float-wa">💬</a>
-<a href="tel:+966500000000" class="float-call">📞</a>
+<a href="https://wa.me/966579796006" class="float-wa">💬</a>
+<a href="tel:+966579796006" class="float-call">📞</a>
 
 <script>
 function toggleFaq(el){

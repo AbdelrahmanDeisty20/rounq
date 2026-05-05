@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="ar" dir="rtl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="من القصيم الى الدمام - الأسطورة رونق قلب الخليج. فك وتركيب وتغليف وضمان. 0500000000">
+<meta name="description" content="من القصيم الى الدمام - الأسطورة رونق قلب الخليج. فك وتركيب وتغليف وضمان. 0579796006">
 <title>من القصيم الى الدمام | الأسطورة رونق قلب الخليج</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -45,14 +45,14 @@ footer a{color:#F1C40F}
 </style></head><body>
 <header><div class="con"><div class="hdr">
   <a href="index" class="logo">🚛 الأسطورة <em>رونق</em> قلب الخليج</a>
-  <div class="btns"><a href="tel:+966500000000" class="br">📞 اتصل</a><a href="https://wa.me/966500000000" class="bg2">💬 واتساب</a></div>
+  <div class="btns"><a href="tel:+966579796006" class="br">📞 اتصل</a><a href="https://wa.me/966579796006" class="bg2">💬 واتساب</a></div>
 </div></div></header>
 <div class="hero"><div class="con">
   <h1>من القصيم الى الدمام</h1>
   <p>خدمة نقل متكاملة تشمل الفك والتغليف والنقل والتركيب بأسعار مناسبة وضمان على سلامة أثاثك.</p>
   <div class="hbtns">
-    <a href="tel:+966500000000" class="bp">📞 اتصل الآن</a>
-    <a href="https://wa.me/966500000000" class="bw">💬 واتساب مباشر</a>
+    <a href="tel:+966579796006" class="bp">📞 اتصل الآن</a>
+    <a href="https://wa.me/966579796006" class="bw">💬 واتساب مباشر</a>
   </div>
 </div></div>
 <section><div class="con">
@@ -85,7 +85,7 @@ footer a{color:#F1C40F}
   <div class="dv"></div>
   <div class="fi2"><div class="fq" onclick="tf(this)">هل الخدمة شاملة الفك والتركيب؟ <span>▶</span></div><div class="fa">نعم، فك بالقصيم وتركيب كامل في الدمام ضمن السعر.</div></div>
   <div class="fi2"><div class="fq" onclick="tf(this)">هل يوجد ضمان على الأثاث؟ <span>▶</span></div><div class="fa">ضمان كامل من الاستلام من القصيم حتى التسليم في الدمام.</div></div>
-  <div class="fi2"><div class="fq" onclick="tf(this)">كيف أحصل على عرض سعر؟ <span>▶</span></div><div class="fa">تواصل على 0500000000 اتصالاً أو واتساب للحصول على عرض مجاني.</div></div>
+  <div class="fi2"><div class="fq" onclick="tf(this)">كيف أحصل على عرض سعر؟ <span>▶</span></div><div class="fa">تواصل على 0579796006 اتصالاً أو واتساب للحصول على عرض مجاني.</div></div>
 </div></section>
 <section class="bgf"><div class="con">
   <span class="tg">مدن أخرى</span>
@@ -106,17 +106,17 @@ footer a{color:#F1C40F}
   <h2>جاهز للنقل إلى الدمام؟</h2>
   <p>تواصل الآن واحصل على خدمة بضمان كامل</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a href="tel:+966500000000" class="bp" style="background:#fff;color:var(--r)">📞 اتصل الآن</a>
-    <a href="https://wa.me/966500000000" class="bw">💬 واتساب</a>
+    <a href="tel:+966579796006" class="bp" style="background:#fff;color:var(--r)">📞 اتصل الآن</a>
+    <a href="https://wa.me/966579796006" class="bw">💬 واتساب</a>
   </div>
 </div></div>
 <footer><div class="con">
   <p>🚛 <strong>الأسطورة رونق قلب الخليج</strong> | من القصيم الى الدمام</p>
-  <p>📞 <a href="tel:+966500000000">0500000000</a> | القصيم، المملكة العربية السعودية</p>
+  <p>📞 <a href="tel:+966579796006">0579796006</a> | القصيم، المملكة العربية السعودية</p>
   <p style="margin-top:10px;opacity:.5;font-size:12px">© 2025 جميع الحقوق محفوظة | <a href="index">الرئيسية</a></p><p style="margin-top:5px;opacity:.8;font-size:12px">Designed and Developed by <a href="https://fourthpyramidagcy.com/" target="_blank" style="color: #F1C40F; text-decoration: underline;">Fourth Pyramid Agency</a></p>
 </div></footer>
-<a href="https://wa.me/966500000000" class="fw">💬</a>
-<a href="tel:+966500000000" class="fc2">📞</a>
+<a href="https://wa.me/966579796006" class="fw">💬</a>
+<a href="tel:+966579796006" class="fc2">📞</a>
 <script>function tf(el){const i=el.parentElement,o=i.classList.contains('op');document.querySelectorAll('.fi2').forEach(x=>x.classList.remove('op'));if(!o)i.classList.add('op');}</script>
 <script src="image-loader.js"></script></body></html>
 

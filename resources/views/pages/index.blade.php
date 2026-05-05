@@ -14,7 +14,7 @@
   "@@type": "MovingCompany",
   "name": "الأسطورة رونق قلب الخليج",
   "description": "من القصيم إلى جميع مدن المملكة",
-  "telephone": "{{ $settings['phone'] ?? '+966500000000' }}",
+  "telephone": "{{ $settings['phone'] ?? '+966579796006' }}",
   "address": {
     "@@type": "PostalAddress",
     "addressLocality": "القصيم",
@@ -874,8 +874,8 @@ footer {
   <div class="container">
     <div>🏠 {{ $settings['address'] ?? 'القصيم، المملكة العربية السعودية' }}</div>
     <div class="contact-info">
-      <span>📞 <a href="tel:{{ $settings['phone'] ?? '0500000000' }}">{{ $settings['phone'] ?? '0500000000' }}</a></span>
-      <span>💬 <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}">واتساب مباشر</a></span>
+      <span>📞 <a href="tel:{{ $settings['phone'] ?? '0579796006' }}">{{ $settings['phone'] ?? '0579796006' }}</a></span>
+      <span>💬 <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966579796006' }}">واتساب مباشر</a></span>
       <span>⏰ متاحون 24/7</span>
     </div>
   </div>
@@ -903,8 +903,8 @@ footer {
         </ul>
       </nav>
       <div class="header-cta">
-        <a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="btn-call">📞 <span>اتصل الآن</span></a>
-        <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="btn-whatsapp">💬 <span>واتساب</span></a>
+        <a href="tel:{{ $settings['phone'] ?? '0579796006' }}" class="btn-call">📞 <span>اتصل الآن</span></a>
+        <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966579796006' }}" class="btn-whatsapp">💬 <span>واتساب</span></a>
         <div class="hamburger" onclick="toggleNav()">
           <span></span><span></span><span></span>
         </div>
@@ -922,8 +922,8 @@ footer {
       <h1>من القصيم الى كل مدن المملكة</h1>
       <p>نقدم خدمات احترافية من القصيم إلى جميع مدن المملكة، مع فريق متخصص في الفك والتركيب والتغليف والتحميل والتنزيل، وضمان الأمان للأثاث.</p>
       <div class="hero-btns">
-        <a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="btn-primary">📞 اطلب الخدمة الآن</a>
-        <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="btn-secondary">💬 تواصل واتساب</a>
+        <a href="tel:{{ $settings['phone'] ?? '0579796006' }}" class="btn-primary">📞 اطلب الخدمة الآن</a>
+        <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966579796006' }}" class="btn-secondary">💬 تواصل واتساب</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><div class="num">+500</div><div class="label">عميل سعيد</div></div>
@@ -1171,7 +1171,7 @@ footer {
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">كيف أتواصل معكم لطلب الخدمة؟ <span class="arrow">▶</span></div>
-        <div class="faq-a">يمكنك التواصل معنا عبر الاتصال المباشر على الرقم 0500000000 أو عبر الواتساب في أي وقت. نحن متاحون على مدار الساعة طوال أيام الأسبوع.</div>
+        <div class="faq-a">يمكنك التواصل معنا عبر الاتصال المباشر على الرقم 0579796006 أو عبر الواتساب في أي وقت. نحن متاحون على مدار الساعة طوال أيام الأسبوع.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">ما هي الأسعار التقريبية لنقل العفش؟ <span class="arrow">▶</span></div>
@@ -1187,8 +1187,8 @@ footer {
     <h2>تحتاج آمن وسريع؟</h2>
     <p>تواصل معنا الآن واحصل على خدمة من القصيم إلى جميع مدن المملكة بأسعار مناسبة وضمان كامل.</p>
     <div class="cta-btns">
-      <a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="btn-white">📞 اتصل الآن</a>
-      <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="btn-wh-green">💬 راسلنا واتساب</a>
+      <a href="tel:{{ $settings['phone'] ?? '0579796006' }}" class="btn-white">📞 اتصل الآن</a>
+      <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966579796006' }}" class="btn-wh-green">💬 راسلنا واتساب</a>
     </div>
   </div>
 </section>
@@ -1203,8 +1203,8 @@ footer {
         </div>
         <p class="brand-desc">من القصيم إلى جميع مدن المملكة. نقدم خدمات احترافية بأسعار مناسبة مع ضمان سلامة الأثاث وراحة البال.</p>
         <div class="footer-contact">
-          <a href="tel:{{ $settings['phone'] ?? '0500000000' }}">📞 {{ $settings['phone'] ?? '0500000000' }}</a>
-          <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}">💬 واتساب مباشر</a>
+          <a href="tel:{{ $settings['phone'] ?? '0579796006' }}">📞 {{ $settings['phone'] ?? '0579796006' }}</a>
+          <a href="https://wa.me/{{ $settings['whatsapp'] ?? '966579796006' }}">💬 واتساب مباشر</a>
           <a href="#">📍 {{ $settings['address'] ?? 'القصيم، المملكة العربية السعودية' }}</a>
         </div>
       </div>
@@ -1250,8 +1250,8 @@ footer {
 </footer>
 
 <!-- FLOATING BUTTONS -->
-<a href="https://wa.me/{{ $settings['whatsapp'] ?? '966500000000' }}" class="float-wa" title="واتساب">💬</a>
-<a href="tel:{{ $settings['phone'] ?? '0500000000' }}" class="float-call" title="اتصال مباشر">📞</a>
+<a href="https://wa.me/{{ $settings['whatsapp'] ?? '966579796006' }}" class="float-wa" title="واتساب">💬</a>
+<a href="tel:{{ $settings['phone'] ?? '0579796006' }}" class="float-call" title="اتصال مباشر">📞</a>
 
 <script>
 // Mobile Nav
