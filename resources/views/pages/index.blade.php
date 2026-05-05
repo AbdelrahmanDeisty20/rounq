@@ -977,7 +977,7 @@ footer {
     <div class="section-header">
       <span class="section-tag">مناطق التغطية</span>
       <h2>المدن التي نخدمها في المملكة</h2>
-      <p>نغطي القصيم وأهم مدن المملكة بخدمة احترافية وبضمان كامل</p>
+      <p>نغطي جميع مدن المملكة بخدمة احترافية وبضمان كامل من القصيم</p>
       <div class="divider"></div>
     </div>
     <div class="seo-grid">
@@ -985,16 +985,16 @@ footer {
         <div class="cities-cards-grid">
           @php
             $cities = [
-              ['name' => 'القصيم', 'slug' => 'afzal-naql-afsh-qaseem', 'icon' => '🏙️'],
-              ['name' => 'الرياض', 'slug' => 'naql-afsh-qaseem-riyadh', 'icon' => '🏙️'],
-              ['name' => 'جدة', 'slug' => 'naql-afsh-qaseem-jeddah', 'icon' => '🌊'],
-              ['name' => 'الدمام', 'slug' => 'naql-afsh-qaseem-dammam', 'icon' => '⛽'],
-              ['name' => 'مكة المكرمة', 'slug' => 'naql-afsh-qaseem-makkah', 'icon' => '🕌'],
-              ['name' => 'المدينة المنورة', 'slug' => 'naql-afsh-qaseem-madinah', 'icon' => '🕌'],
-              ['name' => 'حائل', 'slug' => 'naql-afsh-qaseem-hail', 'icon' => '⛰️'],
-              ['name' => 'الطائف', 'slug' => 'naql-afsh-qaseem-taif', 'icon' => '🌹'],
-              ['name' => 'ينبع', 'slug' => 'naql-afsh-qaseem-yanbu', 'icon' => '⚓'],
-              ['name' => 'سكاكا', 'slug' => 'naql-afsh-qaseem-sakaka', 'icon' => '🏰'],
+              ['name' => 'من القصيم الى كل مدن المملكة', 'slug' => 'afzal-naql-afsh-qaseem', 'icon' => '🏙️'],
+              ['name' => 'من القصيم الى الرياض', 'slug' => 'naql-afsh-qaseem-riyadh', 'icon' => '🏙️'],
+              ['name' => 'من القصيم الى جدة', 'slug' => 'naql-afsh-qaseem-jeddah', 'icon' => '🌊'],
+              ['name' => 'من القصيم الى الدمام', 'slug' => 'naql-afsh-qaseem-dammam', 'icon' => '⛽'],
+              ['name' => 'من القصيم الى مكة المكرمة', 'slug' => 'naql-afsh-qaseem-makkah', 'icon' => '🕌'],
+              ['name' => 'من القصيم الى المدينة المنورة', 'slug' => 'naql-afsh-qaseem-madinah', 'icon' => '🕌'],
+              ['name' => 'من القصيم الى حائل', 'slug' => 'naql-afsh-qaseem-hail', 'icon' => '⛰️'],
+              ['name' => 'من القصيم الى الطائف', 'slug' => 'naql-afsh-qaseem-taif', 'icon' => '🌹'],
+              ['name' => 'من القصيم الى ينبع', 'slug' => 'naql-afsh-qaseem-yanbu', 'icon' => '⚓'],
+              ['name' => 'من القصيم الى سكاكا', 'slug' => 'naql-afsh-qaseem-sakaka', 'icon' => '🏰'],
             ];
           @endphp
           @foreach($cities as $city)
@@ -1221,12 +1221,12 @@ footer {
       <div class="footer-col">
         <h4>نقل العفش</h4>
         <ul>
-          <li><a href="naql-afsh-qaseem-riyadh">القصيم → الرياض</a></li>
-          <li><a href="naql-afsh-qaseem-jeddah">القصيم → جدة</a></li>
-          <li><a href="naql-afsh-qaseem-dammam">القصيم → الدمام</a></li>
-          <li><a href="naql-afsh-qaseem-makkah">القصيم → مكة</a></li>
-          <li><a href="naql-afsh-qaseem-hail">القصيم → حائل</a></li>
-          <li><a href="naql-afsh-qaseem-taif">القصيم → الطائف</a></li>
+          <li><a href="naql-afsh-qaseem-riyadh">من القصيم الى الرياض</a></li>
+          <li><a href="naql-afsh-qaseem-jeddah">من القصيم الى جدة</a></li>
+          <li><a href="naql-afsh-qaseem-dammam">من القصيم الى الدمام</a></li>
+          <li><a href="naql-afsh-qaseem-makkah">من القصيم الى مكة</a></li>
+          <li><a href="naql-afsh-qaseem-hail">من القصيم الى حائل</a></li>
+          <li><a href="naql-afsh-qaseem-taif">من القصيم الى الطائف</a></li>
         </ul>
       </div>
       <div class="footer-col">
