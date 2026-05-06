@@ -364,7 +364,7 @@ section { padding: 80px 0; }
 }
 .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
 .service-card-img {
-  height: 180px;
+  height: 340px;
   overflow: hidden;
   position: relative;
 }
@@ -397,7 +397,7 @@ section { padding: 80px 0; }
   box-shadow: 0 4px 14px rgba(192,57,43,0.45);
   border: 3px solid var(--white);
 }
-.service-card h3 { font-size: 16px; font-weight: 700; color: var(--blue); margin-bottom: 10px; text-align: center; padding: 0 18px; }
+.service-card h3 { font-size: 22px; font-weight: 700; color: var(--blue); margin-bottom: 10px; text-align: center; padding: 0 18px; }
 .service-card p { font-size: 13px; color: var(--gray); line-height: 1.7; text-align: center; padding: 0 18px 22px; }
 
 /* ===== SEO LINKS ===== */
@@ -493,7 +493,7 @@ section { padding: 80px 0; }
 .step-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .step-img-wrap {
   position: relative;
-  height: 180px;
+  height: 340px;
   overflow: hidden;
 }
 .step-img-wrap img {
@@ -824,7 +824,7 @@ footer {
   .btn-primary, .btn-secondary { justify-content: center; }
   section { padding: 60px 0; }
   .steps-wrap { grid-template-columns: repeat(2, 1fr); }
-  .service-card-img { height: 140px; }
+  .service-card-img { height: 280px; }
 }
 
 /* ===== ANIMATIONS ===== */
