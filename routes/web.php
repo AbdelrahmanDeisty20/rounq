@@ -58,4 +58,8 @@ Route::get('/index', function() {
     return redirect('/', 301);
 });
 
+Route::get('/video-stream', [PageController::class, 'streamVideo']);
+
 Route::get('/{slug}', [PageController::class, 'show'])->where('slug', '.*');
+
+

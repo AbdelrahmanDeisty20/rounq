@@ -14,7 +14,9 @@
 @php
     $sectionLabels = [
         'hero' => 'الخلفية الرئيسية',
+        'video-testimonial' => 'رأي عميل مصور بالفيديو',
         'service-1' => 'خدمة 1 — فك وتركيب',
+
         'service-2' => 'خدمة 2 — شاحنة نقل',
         'service-3' => 'خدمة 3 — نقل بضمان',
         'service-4' => 'خدمة 4 — نقل آمن',
@@ -67,6 +69,7 @@
       <li><a href="{{ route('admin.settings.index') }}"><span class="nav-icon">📞</span> أرقام التواصل</a></li>
       @endrole
       <li><a href="#" onclick="switchTab('hero', this)" id="nav-hero"><span class="nav-icon">🌟</span> صورة الخلفية الرئيسية</a></li>
+      <li><a href="#" onclick="switchTab('video-testimonial', this)" id="nav-video-testimonial"><span class="nav-icon">🎥</span> الآراء المصورة (فيديو)</a></li>
       <li><a href="#" onclick="switchTab('services', this)" id="nav-services"><span class="nav-icon">🛋️</span> صور الخدمات</a></li>
       <li><a href="#" onclick="switchTab('steps', this)" id="nav-steps"><span class="nav-icon">🔢</span> صور خطوات العمل</a></li>
       <li><a href="#" onclick="switchTab('gallery', this)" id="nav-gallery"><span class="nav-icon">📸</span> معرض الأعمال</a></li>
@@ -140,12 +143,17 @@
         <div class="stat-icon green">📸</div>
         <div><div class="stat-num">{{ $stats['gallery'] }}</div><div class="stat-label">صور المعرض</div></div>
       </div>
+      <div class="stat-card">
+        <div class="stat-icon red" style="background:rgba(231,76,60,0.1);color:#e74c3c">🎥</div>
+        <div><div class="stat-num">{{ $stats['videos'] ?? 0 }}</div><div class="stat-label">الآراء المصورة</div></div>
+      </div>
     </div>
 
     <!-- TABS -->
     <div class="tabs">
       <button class="tab-btn active" onclick="switchTab('current', null)" id="tab-current">🖼️ الكل</button>
       <button class="tab-btn" onclick="switchTab('hero', null)" id="tab-hero">🌟 الخلفية</button>
+      <button class="tab-btn" onclick="switchTab('video-testimonial', null)" id="tab-video-testimonial">🎥 الآراء المصورة</button>
       <button class="tab-btn" onclick="switchTab('services', null)" id="tab-services">🛋️ الخدمات</button>
       <button class="tab-btn" onclick="switchTab('steps', null)" id="tab-steps">🔢 الخطوات</button>
       <button class="tab-btn" onclick="switchTab('gallery', null)" id="tab-gallery">📸 المعرض</button>
@@ -165,7 +173,11 @@
         @foreach($images as $image)
         <div class="current-img-card" data-section="{{ $image->section }}">
           <div class="img-wrap">
-            <img src="{{ $image->url }}" alt="{{ $image->title }}">
+            @if(strtolower($image->section) === 'video-testimonial' || str_ends_with(strtolower($image->url), '.mp4') || str_ends_with(strtolower($image->url), '.webm'))
+              <video src="{{ $image->url }}#t=0.5" preload="metadata" muted playsinline style="width:100%;height:100%;object-fit:cover"></video>
+            @else
+              <img src="{{ $image->url }}" alt="{{ $image->title }}">
+            @endif
             <div class="img-badge">{{ strtoupper($image->section) }}</div>
           </div>
           <div class="card-info">
@@ -206,6 +218,40 @@
         </div>
       </div>
     </div>
+
+    <!-- ========== PANEL: VIDEO TESTIMONIAL ========== -->
+    <div class="panel" id="panel-video-testimonial">
+      @php $videoTests = $images->where('section', 'video-testimonial'); @endphp
+      <div class="section-card">
+        <div class="section-card-header">
+          <h3>🎥 قائمة الآراء المصورة بالفيديو (Testimonials)</h3>
+          <button class="btn btn-primary" onclick="switchTab('upload', null)">⬆️ رفع فيديو جديد</button>
+        </div>
+        <div class="section-card-body">
+          <p style="font-size:13px;color:var(--muted);margin-bottom:20px">تظهر هذه الفيديوهات في الصفحة الرئيسية كآراء وتقييمات مصورة للعملاء.</p>
+          @if($videoTests->count() > 0)
+            <div class="img-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+              @foreach($videoTests as $video)
+                <div class="img-item active-img" style="height: auto; min-height: 250px;">
+                  <video src="{{ $video->url }}#t=0.5" preload="metadata" muted playsinline style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;"></video>
+                  <div class="img-item-info">
+                    <div class="img-item-label">{{ $video->title ?? 'رأي عميل مصور' }}</div>
+                    <div class="img-item-actions" style="margin-top: 10px;">
+                      <button class="btn btn-primary btn-sm" onclick="openChangeModal('{{ $video->id }}','{{ $video->title ?? 'رأي عميل مصور' }}','{{ $video->url }}')">✏️ تغيير</button>
+                      <button class="btn btn-outline btn-sm" onclick="previewImg('{{ $video->url }}')">👁️ معاينة</button>
+                      <button class="btn btn-danger btn-sm" onclick="deleteImage('{{ $video->id }}')">🗑️ حذف</button>
+                    </div>
+                  </div>
+                </div>
+              @endforeach
+            </div>
+          @else
+            <div style="padding:40px;text-align:center;border:2px dashed #ddd;border-radius:12px;color:var(--muted)">لا توجد فيديوهات حالياً، يرجى رفع فيديو من تبويب "رفع صورة" واختيار قسم "رأي عميل مصور بالفيديو".</div>
+          @endif
+        </div>
+      </div>
+    </div>
+
 
     <!-- ========== PANEL: SERVICES ========== -->
     <div class="panel" id="panel-services">
@@ -358,8 +404,8 @@
             <div class="upload-zone" onclick="document.getElementById('fileInputMain').click()" id="uploadZone">
               <div class="upload-icon">📁</div>
               <h4>اضغط للاختيار</h4>
-              <p>يدعم: JPG, PNG, WEBP</p>
-              <input type="file" id="fileInputMain" name="image" accept="image/*" style="display:none" onchange="previewFileMain(this)">
+              <p>يدعم: JPG, PNG, WEBP, MP4, WEBM</p>
+              <input type="file" id="fileInputMain" name="image" accept="image/*,video/*" style="display:none" onchange="previewFileMain(this)">
             </div>
             <div id="uploadPreviewMain" class="img-preview-box" style="display:none; margin-top:16px">
                 <img id="uploadPreviewImgMain" src="" alt="" style="display:block">
@@ -369,6 +415,7 @@
               <select name="section" required class="form-control">
                 <option value="">-- اختر القسم --</option>
                 <option value="hero">الخلفية الرئيسية (Hero)</option>
+                <option value="video-testimonial">رأي عميل مصور بالفيديو</option>
                 <option value="service-1">خدمة 1 — فك وتركيب</option>
                 <option value="service-2">خدمة 2 — شاحنة نقل</option>
                 <option value="service-3">خدمة 3 — نقل بضمان</option>
@@ -414,6 +461,7 @@
               <select name="section" required class="form-control">
                 <option value="">-- اختر القسم --</option>
                 <option value="hero">الخلفية الرئيسية (Hero)</option>
+                <option value="video-testimonial">رأي عميل مصور بالفيديو</option>
                 <option value="service-1">خدمة 1 — فك وتركيب</option>
                 <option value="service-2">خدمة 2 — شاحنة نقل</option>
                 <option value="service-3">خدمة 3 — نقل بضمان</option>
@@ -546,7 +594,7 @@
           <div class="upload-zone" onclick="document.getElementById('modalFileInput').click()" style="padding: 20px; border-style: dashed;">
             <div class="upload-icon" style="font-size: 32px;">📁</div>
             <h4 style="font-size: 14px;">اضغط لرفع صورة من جهازك</h4>
-            <input type="file" id="modalFileInput" style="display:none" accept="image/*" onchange="handleModalFile(this.files[0])">
+            <input type="file" id="modalFileInput" style="display:none" accept="image/*,video/*" onchange="handleModalFile(this.files[0])">
           </div>
           <div style="display:flex; align-items:center; gap:10px;">
             <div style="flex:1; height:1px; background:var(--border)"></div>
@@ -575,6 +623,7 @@
         <select id="modalSectionSelect" class="form-control">
           <option value="">-- ابقَ في نفس القسم --</option>
           <option value="hero">الخلفية الرئيسية (Hero)</option>
+          <option value="video-testimonial">رأي عميل مصور بالفيديو</option>
           <option value="service-1">خدمة 1 — فك وتركيب</option>
           <option value="service-2">خدمة 2 — شاحنة نقل</option>
           <option value="service-3">خدمة 3 — نقل بضمان</option>

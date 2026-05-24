@@ -41,6 +41,7 @@ function switchTab(tab, linkEl) {
     const titles = {
         current: ["الصور الحالية في الموقع", "عرض وإدارة جميع صور الموقع"],
         hero: ["صورة الخلفية الرئيسية", "تغيير خلفية Hero Section"],
+        'video-testimonial': ["الآراء المصورة بالفيديو", "إدارة وتحديث فيديوهات التقييم للعملاء"],
         services: ["صور كروت الخدمات", "إدارة صور الخدمات"],
         steps: ["صور خطوات العمل", "إدارة صور الخطوات"],
         gallery: ["معرض الأعمال", "إضافة وحذف وتغيير صور المعرض"],
@@ -80,8 +81,8 @@ function openChangeModal(id, name, currentUrl) {
 }
 
 function handleModalFile(file) {
-    if (!file || !file.type.startsWith("image/")) {
-        showToast("⚠️ يرجى اختيار ملف صورة صحيح", "error");
+    if (!file || !(file.type.startsWith("image/") || file.type.startsWith("video/"))) {
+        showToast("⚠️ يرجى اختيار ملف صورة أو فيديو صحيح", "error");
         return;
     }
 
@@ -90,12 +91,16 @@ function handleModalFile(file) {
         currentModalFile = e.target.result;
         document.getElementById("modalUrlInput").value = "";
         const box = document.getElementById("modalNewPreview");
-        const img = document.getElementById("modalNewImg");
-        img.src = e.target.result;
+        if (file.type.startsWith("video/")) {
+            box.innerHTML = `<video src="${e.target.result}" controls style="width:100%; max-height:200px; display:block; border-radius:8px; margin:0 auto;"></video>`;
+        } else {
+            box.innerHTML = `<img id="modalNewImg" src="${e.target.result}" style="width:100%; max-height:200px; display:block; border-radius:8px; object-fit:contain;">`;
+        }
         box.style.display = "block";
     };
     reader.readAsDataURL(file);
 }
+
 
 function previewModalUrl(url) {
     const box = document.getElementById("modalNewPreview");
@@ -194,12 +199,26 @@ function deleteImage(id) {
 // ===== PREVIEW =====
 function previewImg(url) {
     const modal = document.getElementById("previewModal");
-    const img = document.getElementById("fullPreviewImg");
-    if (modal && img) {
-        img.src = url;
-        modal.classList.add("open");
+    if (!modal) return;
+
+    const isVideo = url.toLowerCase().endsWith('.mp4') || url.toLowerCase().endsWith('.webm') || url.toLowerCase().includes('video') || url.toLowerCase().includes('mp4');
+
+    if (isVideo) {
+        modal.innerHTML = `
+            <div class="modal modal-lg" onclick="event.stopPropagation()" style="background:#000; padding:0; overflow:hidden;">
+                <video src="${url}" controls autoplay style="width:100%; max-height:80vh; display:block; border-radius:12px;"></video>
+            </div>
+        `;
+    } else {
+        modal.innerHTML = `
+            <div class="modal modal-lg" onclick="event.stopPropagation()">
+                <img src="${url}" alt="" style="width:100%; border-radius:12px;">
+            </div>
+        `;
     }
+    modal.classList.add("open");
 }
+
 
 function closeModal(id) {
     const el = document.getElementById(id);
@@ -238,16 +257,21 @@ function previewUrlMain(url) {
 
 function previewFileMain(input) {
     const box = document.getElementById("uploadPreviewMain");
-    const img = document.getElementById("uploadPreviewImgMain");
     if (input.files && input.files[0]) {
+        const file = input.files[0];
         const reader = new FileReader();
         reader.onload = function (e) {
-            img.src = e.target.result;
+            if (file.type.startsWith("video/")) {
+                box.innerHTML = `<video src="${e.target.result}" controls style="max-width:100%; max-height:220px; display:block; border-radius:8px; margin:0 auto;"></video>`;
+            } else {
+                box.innerHTML = `<img id="uploadPreviewImgMain" src="${e.target.result}" style="max-width:100%; max-height:220px; display:block; border-radius:8px; object-fit:contain;">`;
+            }
             box.style.display = "block";
         };
-        reader.readAsDataURL(input.files[0]);
+        reader.readAsDataURL(file);
     }
 }
+
 
 function setUrlMain(url) {
     const input = document.getElementById("urlInputMain");

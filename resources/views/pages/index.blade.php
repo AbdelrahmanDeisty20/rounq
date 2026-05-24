@@ -51,9 +51,9 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@@300;400;600;700;900&family=Tajawal:wght@@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 <style>
 :root {
@@ -932,11 +932,40 @@ footer {
         <div class="stat"><div class="num">100%</div><div class="label">نقل بضمان</div></div>
       </div>
     </div>
+</section>
+
+@if(isset($images['video_testimonials']) && $images['video_testimonials']->count() > 0)
+<!-- VIDEO TESTIMONIAL SECTION -->
+<section class="video-testimonial-section" style="padding: 60px 0; background: var(--off-white); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" style="background: linear-gradient(135deg, var(--red), var(--red-dark));">آراء مصورة</span>
+      <h2>ماذا يقول <em>عملائنا؟</em></h2>
+      <p>شاهد تجارب عملائنا الحقيقية وصوتهم في تقييم خدماتنا بالقصيم والمملكة</p>
+      <div class="divider"></div>
+    </div>
+    
+    <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; max-width: {{ $images['video_testimonials']->count() === 1 ? '600px' : '1000px' }}; margin-left: auto; margin-right: auto;">
+      @foreach($images['video_testimonials'] as $video)
+      {{-- Video card --}}
+      <div class="tc home-test-video-item-el" onclick="openVid('{{ $video->url }}')" style="cursor:pointer; display:block; padding:0; overflow:hidden; position:relative; min-height:340px; width: 100%; background:#080f1e; border-radius:var(--radius); box-shadow:var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-lg)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow)';">
+        <video src="{{ $video->url }}#t=0.5" preload="metadata" muted playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; pointer-events:none;"></video>
+        <div style="position:absolute; inset:0; background:rgba(8,15,30,0.35); display:flex; align-items:center; justify-content:center;">
+          <div style="width:72px; height:72px; border-radius:50%; background:var(--red); display:flex; align-items:center; justify-content:center; color:#fff; font-size:28px; box-shadow:0 0 35px rgba(192,57,43,0.85); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+            <i class="fas fa-play" style="margin-left:-3px;"></i>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
   </div>
 </section>
+@endif
+
 
 <!-- SERVICES -->
 <section class="services" id="services">
+
   <div class="container">
     <div class="section-header">
       <span class="section-tag">خدماتنا</span>
@@ -1290,9 +1319,51 @@ window.addEventListener('scroll', () => {
     header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
   }
 });
+
+function openVid(url) {
+  const modal = document.getElementById('vidModal');
+  const body = document.getElementById('vidBody');
+  if (!modal || !body) return;
+
+  let finalUrl = url;
+  const isLocalDev = window.location.hostname === 'localhost'
+                  || window.location.hostname === '127.0.0.1'
+                  || window.location.hostname.startsWith('192.168.');
+  if (isLocalDev && !url.startsWith('http')) {
+      let path = url.replace(/^\/+/, '');
+      finalUrl = `/video-stream?path=${encodeURIComponent(path)}`;
+  }
+  
+  body.innerHTML = `<video src="${finalUrl}" controls playsinline autoplay style="width:100%; height:100%; object-fit:contain;" onclick="event.stopPropagation()"></video>`;
+  const videoEl = body.querySelector('video');
+  if (videoEl) {
+      videoEl.play().catch(err => console.log('Autoplay blocked:', err));
+  }
+  
+  modal.style.display = 'flex';
+}
+
+function closeVid() {
+  const modal = document.getElementById('vidModal');
+  const body = document.getElementById('vidBody');
+  if (modal) modal.style.display = 'none';
+  if (body) body.innerHTML = '';
+}
 </script>
+
+<!-- Global Video Lightbox Modal -->
+<div id="vidModal" style="display:none; position:fixed; inset:0; background:rgba(8,15,30,0.92); z-index:99999; align-items:center; justify-content:center; padding:15px; backdrop-filter:blur(10px); transition: opacity 0.3s ease;" onclick="if(event.target===this)closeVid()">
+    <div class="vmod-in" style="position:relative; width:100%; max-width:850px; aspect-ratio:16/9; background:#000; border-radius:16px; overflow:hidden; box-shadow:0 25px 60px rgba(0,0,0,0.7); border:1px solid rgba(255,255,255,0.1);" onclick="event.stopPropagation()">
+        <button onclick="closeVid()" style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:18px; width:38px; height:38px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:100; transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.3)'; this.style.transform='scale(1.1)';" onmouseout="this.style.background='rgba(255,255,255,0.15)'; this.style.transform='scale(1)';">
+            <i class="fas fa-times"></i>
+        </button>
+        <div id="vidBody" style="width:100%; height:100%;" onclick="event.stopPropagation()"></div>
+    </div>
+</div>
+
 </body>
 </html>
+
 
 
 

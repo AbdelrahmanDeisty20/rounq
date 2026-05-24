@@ -17,6 +17,7 @@ class ImageController extends Controller
             'hero' => $images->where('section', 'hero')->count(),
             'services' => $images->filter(fn($img) => str_starts_with($img->section, 'service-'))->count(),
             'gallery' => $images->filter(fn($img) => str_starts_with($img->section, 'gallery'))->count(),
+            'videos' => $images->where('section', 'video-testimonial')->count(),
         ];
 
         return view('admin.images', compact('images', 'stats'));
@@ -34,7 +35,7 @@ class ImageController extends Controller
         $section = $request->section;
 
         // Unique sections like hero, service-*, step-*, and specific gallery categories
-        if ($section !== 'gallery') {
+        if ($section !== 'gallery' && $section !== 'video-testimonial') {
             // Case-insensitive search to match GALLERY-TRUCKS or gallery-trucks
             $image = SiteImage::whereRaw('LOWER(section) = ?', [strtolower($section)])->first();
 
@@ -50,8 +51,8 @@ class ImageController extends Controller
                 $image = new SiteImage(['section' => strtolower($section)]);
             }
         } else {
-            // General gallery section allows multiple images
-            $image = new SiteImage(['section' => 'gallery']);
+            // General gallery and video-testimonial sections allow multiple entries
+            $image = new SiteImage(['section' => strtolower($section)]);
         }
 
         if ($request->title) {
@@ -60,6 +61,7 @@ class ImageController extends Controller
             // Auto-set title based on section if missing
             $labels = [
                 'hero' => 'الخلفية الرئيسية',
+                'video-testimonial' => 'رأي عميل مصور بالفيديو',
                 'service-1' => 'خدمة 1 — فك وتركيب',
                 'service-2' => 'خدمة 2 — شاحنة نقل',
                 'service-3' => 'خدمة 3 — نقل بضمان',
@@ -125,7 +127,7 @@ class ImageController extends Controller
 
         if ($request->section) {
             // If moving to a unique section, delete any existing image there first
-            if ($request->section !== 'gallery') {
+            if ($request->section !== 'gallery' && $request->section !== 'video-testimonial') {
                 SiteImage::whereRaw('LOWER(section) = ?', [strtolower($request->section)])
                     ->where('id', '!=', $image->id)
                     ->delete();
