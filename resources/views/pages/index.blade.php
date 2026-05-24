@@ -896,7 +896,7 @@ footer {
         <div class="logo-icon">🚛</div>
         <div class="logo-text">
           <div class="brand-name">الأسطورة <span>رونق</span> قلب الخليج</div>
-          <div class="brand-sub">نقل عفش من القصيم لكافة مدن المملكة</div>
+          <div class="brand-sub">نقل عفش احترافي من القصيم الى جميع مدن المملكة</div>
         </div>
       </a>
       <nav id="mainNav">
