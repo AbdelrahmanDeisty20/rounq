@@ -808,9 +808,16 @@ footer {
   .hamburger { display: flex; }
   .header-cta .btn-call span, .header-cta .btn-whatsapp span { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .logo-icon { width: 50px; height: 50px; font-size: 22px; }
+  .logo-text .brand-name { font-size: 15px; }
+  .logo-text .brand-sub { font-size: 10px; }
 }
 
 @@media (max-width: 600px) {
+  .logo { gap: 8px; }
+  .logo-icon { width: 42px; height: 42px; font-size: 18px; box-shadow: 0 2px 8px rgba(192,57,43,0.3); }
+  .logo-text .brand-name { font-size: 13px; font-weight: 900; }
+  .logo-text .brand-sub { font-size: 8.5px; line-height: 1.3; max-width: 140px; }
   .hero { padding: 60px 0 100px; min-height: auto; }
   .hero-stats { gap: 20px; }
   .hero-stats .stat .num { font-size: 24px; }
@@ -889,7 +896,7 @@ footer {
         <div class="logo-icon">🚛</div>
         <div class="logo-text">
           <div class="brand-name">الأسطورة <span>رونق</span> قلب الخليج</div>
-          <div class="brand-sub">نقل عفش احترافي من القصيم الى جميع مدن المملكة</div>
+          <div class="brand-sub">نقل عفش من القصيم لكافة مدن المملكة</div>
         </div>
       </a>
       <nav id="mainNav">
