@@ -1333,9 +1333,17 @@ function openVid(url) {
   if (!modal || !body) return;
 
   let finalUrl = url;
-  if (!url.startsWith('http://') && !url.startsWith('https://')) {
-      let path = url.replace(/^\/+/, '');
-      // Add a timestamp parameter to prevent browser caching issues
+  const isLocal = !url.startsWith('http://') && !url.startsWith('https://') 
+               || url.includes(window.location.hostname);
+
+  if (isLocal) {
+      let path = url;
+      if (url.startsWith('http://') || url.startsWith('https://')) {
+          const parser = document.createElement('a');
+          parser.href = url;
+          path = parser.pathname;
+      }
+      path = path.replace(/^\/+/, '');
       finalUrl = `/video-stream?path=${encodeURIComponent(path)}&t=${new Date().getTime()}`;
   }
   
