@@ -1333,12 +1333,10 @@ function openVid(url) {
   if (!modal || !body) return;
 
   let finalUrl = url;
-  const isLocalDev = window.location.hostname === 'localhost'
-                  || window.location.hostname === '127.0.0.1'
-                  || window.location.hostname.startsWith('192.168.');
-  if (isLocalDev && !url.startsWith('http')) {
+  if (!url.startsWith('http://') && !url.startsWith('https://')) {
       let path = url.replace(/^\/+/, '');
-      finalUrl = `/video-stream?path=${encodeURIComponent(path)}`;
+      // Add a timestamp parameter to prevent browser caching issues
+      finalUrl = `/video-stream?path=${encodeURIComponent(path)}&t=${new Date().getTime()}`;
   }
   
   body.innerHTML = `<video src="${finalUrl}" controls playsinline autoplay style="width:100%; height:100%; object-fit:contain;" onclick="event.stopPropagation()"></video>`;
