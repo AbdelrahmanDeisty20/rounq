@@ -73,6 +73,8 @@
       <li><a href="#" onclick="switchTab('services', this)" id="nav-services"><span class="nav-icon">🛋️</span> صور الخدمات</a></li>
       <li><a href="#" onclick="switchTab('steps', this)" id="nav-steps"><span class="nav-icon">🔢</span> صور خطوات العمل</a></li>
       <li><a href="#" onclick="switchTab('gallery', this)" id="nav-gallery"><span class="nav-icon">📸</span> معرض الأعمال</a></li>
+    </ul>
+  </div>
   <div class="sidebar-section">
     <div class="sidebar-section-title">أدوات إضافية</div>
     <ul class="sidebar-nav">
@@ -428,15 +430,10 @@
                 <option value="step-2">الخطوة ٢ — الحجم</option>
                 <option value="step-3">الخطوة ٣ — معاينة</option>
                 <option value="step-4">الخطوة ٤ — تغليف</option>
-                <option value="step-5">الخطوة ١ — نقل</option>
+                <option value="step-5">الخطوة ٥ — نقل</option>
                 <option value="step-6">الخطوة ٦ — تركيب</option>
                 <option value="gallery-packing">معرض — التغليف بالكراتين</option>
                 <option value="gallery-trucks">معرض — شاحنات النقل</option>
-
-
-
-
-
               </select>
             </div>
             <button type="submit" class="btn btn-success" style="width:100%;margin-top:10px">✅ رفع الصورة الآن</button>
@@ -478,8 +475,6 @@
                 <option value="step-6">الخطوة ٦ — تركيب</option>
                 <option value="gallery-packing">معرض — التغليف بالكراتين</option>
                 <option value="gallery-trucks">معرض — شاحنات النقل</option>
-
-
               </select>
               <button type="submit" class="btn btn-primary">✅ تطبيق</button>
             </div>
@@ -518,58 +513,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ========== PANEL: UPLOAD (HIDDEN BY DEFAULT) ========== -->
-    <div class="panel" id="panel-upload">
-      <div class="section-card">
-        <div class="section-card-header">
-          <h3>⬆️ رفع صور من جهازك (نظام قديم)</h3>
-        </div>
-        <div class="section-card-body">
-          <form action="{{ route('admin.images.store') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="upload-zone" onclick="document.getElementById('fileInputMain').click()">
-              <div class="upload-icon">📁</div>
-              <h4>اضغط للاختيار</h4>
-              <input type="file" id="fileInputMain" name="image" accept="image/*" style="display:none" onchange="previewFileMain(this)">
-            </div>
-            <div class="form-group" style="margin-top:20px">
-              <label class="form-label">القسم</label>
-              <select name="section" required class="form-control">
-                @foreach($sectionLabels as $k => $v)
-                  <option value="{{ $k }}">{{ $v }}</option>
-                @endforeach
-              </select>
-            </div>
-            <button type="submit" class="btn btn-success" style="width:100%">✅ رفع الآن</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- ========== PANEL: URL (HIDDEN BY DEFAULT) ========== -->
-    <div class="panel" id="panel-url">
-      <div class="section-card">
-        <div class="section-card-header">
-          <h3>🔗 إضافة برابط (نظام قديم)</h3>
-        </div>
-        <div class="section-card-body">
-          <form action="{{ route('admin.images.store') }}" method="POST">
-            @csrf
-            <input type="hidden" name="is_url" value="1">
-            <div class="url-input-row">
-              <input type="text" name="url" placeholder="https://..." required class="form-control">
-              <select name="section" required class="form-control">
-                @foreach($sectionLabels as $k => $v)
-                  <option value="{{ $k }}">{{ $v }}</option>
-                @endforeach
-              </select>
-              <button type="submit" class="btn btn-primary">✅ تطبيق</button>
-            </div>
-          </form>
         </div>
       </div>
     </div>

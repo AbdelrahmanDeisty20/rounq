@@ -863,7 +863,7 @@ footer {
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, rgba(26,58,107,0.92) 0%, rgba(26,26,46,0.88) 60%, rgba(146,43,33,0.85) 100%),
-              url('{{ $images['hero'][0]->url ?? 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=1400&q=80' }}') center/cover no-repeat;
+              url('{{ $images['hero']->first()->url ?? 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=1400&q=80' }}') center/cover no-repeat;
   color: var(--white);
   padding: 80px 0;
   position: relative;

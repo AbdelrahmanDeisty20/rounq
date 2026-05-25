@@ -23,18 +23,13 @@ class PageController extends Controller
         }
 
         $allImages = SiteImage::all();
-        $dbTestimonials = \App\Models\Testimonial::whereNotNull('video')->where('status', 'active')->get();
-        if ($dbTestimonials->count() > 0) {
-            $videoTestimonials = $dbTestimonials->map(function($t) {
-                return (object)[
-                    'url' => $t->video,
-                    'is_active' => $t->status === 'active',
-                    'title' => $t->name ?? 'رأي عميل مصور'
-                ];
-            });
-        } else {
-            $videoTestimonials = $allImages->where('section', 'video-testimonial')->where('is_active', true);
-        }
+        $videoTestimonials = $allImages->where('section', 'video-testimonial')->where('is_active', true)->map(function($img) {
+            return (object)[
+                'url' => $img->url,
+                'is_active' => (bool)$img->is_active,
+                'title' => $img->title ?? 'رأي عميل مصور'
+            ];
+        });
 
         $images = [
             'hero' => $allImages->where('section', 'hero'),
