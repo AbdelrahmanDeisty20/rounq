@@ -954,9 +954,20 @@ footer {
     
     <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; max-width: {{ $images['video_testimonials']->count() === 1 ? '600px' : '1000px' }}; margin-left: auto; margin-right: auto;">
       @foreach($images['video_testimonials'] as $video)
+      @php
+        $rawUrl = $video->url;
+        $encodedUrl = $rawUrl;
+        if (str_starts_with($rawUrl, 'http://') || str_starts_with($rawUrl, 'https://')) {
+            $parsed = parse_url($rawUrl);
+            $encodedPath = implode('/', array_map('rawurlencode', explode('/', ltrim($parsed['path'] ?? '', '/'))));
+            $encodedUrl = ($parsed['scheme'] ?? 'https') . '://' . ($parsed['host'] ?? '') . '/' . $encodedPath;
+        } else {
+            $encodedUrl = implode('/', array_map('rawurlencode', explode('/', ltrim($rawUrl, '/'))));
+        }
+      @endphp
       {{-- Video card --}}
-      <div class="tc home-test-video-item-el" onclick="openVid('{{ $video->url }}')" style="cursor:pointer; display:block; padding:0; overflow:hidden; position:relative; min-height:340px; width: 100%; background:#080f1e; border-radius:var(--radius); box-shadow:var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-lg)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow)';">
-        <video src="{{ $video->url }}#t=0.5" preload="metadata" muted playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; pointer-events:none;"></video>
+      <div class="tc home-test-video-item-el" onclick="openVid('{{ $encodedUrl }}')" style="cursor:pointer; display:block; padding:0; overflow:hidden; position:relative; min-height:340px; width: 100%; background:#080f1e; border-radius:var(--radius); box-shadow:var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-lg)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow)';">
+        <video src="{{ $encodedUrl }}#t=0.5" preload="metadata" muted playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; pointer-events:none;"></video>
         <div style="position:absolute; inset:0; background:rgba(8,15,30,0.35); display:flex; align-items:center; justify-content:center;">
           <div style="width:72px; height:72px; border-radius:50%; background:var(--red); display:flex; align-items:center; justify-content:center; color:#fff; font-size:28px; box-shadow:0 0 35px rgba(192,57,43,0.85); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
             <i class="fas fa-play" style="margin-left:-3px;"></i>
@@ -1333,18 +1344,19 @@ function openVid(url) {
   if (!modal || !body) return;
 
   let finalUrl = url;
-  const isLocal = !url.startsWith('http://') && !url.startsWith('https://') 
-               || url.includes(window.location.hostname);
-
-  if (isLocal) {
-      let path = url;
-      if (url.startsWith('http://') || url.startsWith('https://')) {
-          const parser = document.createElement('a');
-          parser.href = url;
-          path = parser.pathname;
-      }
-      path = path.replace(/^\/+/, '');
+  
+  // On local dev, we route through /video-stream if needed
+  const isLocalDev = window.location.hostname === 'localhost'
+                  || window.location.hostname === '127.0.0.1'
+                  || window.location.hostname.startsWith('192.168.');
+                  
+  if (isLocalDev && !url.startsWith('http')) {
+      let path = url.replace(/^\/+/, '');
       finalUrl = `/video-stream?path=${encodeURIComponent(path)}&t=${new Date().getTime()}`;
+  } else {
+      // In production, we serve the raw-URL-encoded static video directly via Apache
+      // bypass PHP overhead/memory buffering, and append the cache-busting timestamp.
+      finalUrl = finalUrl + (finalUrl.includes('?') ? '&' : '?') + `t=${new Date().getTime()}`;
   }
   
   body.innerHTML = `<video src="${finalUrl}" controls playsinline autoplay style="width:100%; height:100%; object-fit:contain;" onclick="event.stopPropagation()"></video>`;
