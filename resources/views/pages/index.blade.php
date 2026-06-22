@@ -939,6 +939,27 @@ footer {
         <div class="stat"><div class="num">100%</div><div class="label">نقل بضمان</div></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PARTNER CLEANING SITE LINK -->
+<section class="partner-section" style="padding: 40px 0; background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); position: relative; z-index: 10;">
+  <div class="container">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; text-align: right;">
+      <div style="flex: 1; min-width: 280px;">
+        <span class="badge" style="display: inline-block; background: var(--blue); color: var(--white); padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: bold; margin-bottom: 10px;"><i class="fas fa-broom"></i> خدمات النظافة</span>
+        <h3 style="font-size: 22px; font-weight: 900; color: var(--blue); margin: 0; font-family: 'Cairo', sans-serif;">خدمات التنظيف والنظافة الشاملة</h3>
+        <p style="color: var(--gray); margin: 6px 0 0; font-size: 14px; line-height: 1.6;">نوفر لكم خدمات تنظيف المنازل، الفلل، الشقق، والمباني بأعلى مستويات الكفاءة والاحترافية</p>
+      </div>
+      <div>
+        <a href="https://rtscllean.com/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; font-weight: bold; text-decoration: none; padding: 14px 28px; border-radius: 50px; background: linear-gradient(135deg, var(--red), var(--red-dark)); color: var(--white); box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3); transition: all 0.3s ease; border: none; font-size: 15px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(192, 57, 43, 0.45)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(192, 57, 43, 0.3)';">
+          <i class="fas fa-sparkles"></i>
+          <span>افضل شركة تنظيف</span>
+          <i class="fas fa-external-link-alt" style="font-size: 11px; opacity: 0.8;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 @if(isset($images['video_testimonials']) && $images['video_testimonials']->count() > 0)
