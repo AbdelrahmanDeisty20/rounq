@@ -1195,6 +1195,22 @@
       max-height: 300px;
       padding: 0 24px 20px;
     }
+    @@media (max-width: 1200px) and (min-width: 901px) {
+      .logo-text .brand-sub {
+        display: none;
+      }
+      nav ul li a {
+        font-size: 11px !important;
+        padding: 6px 4px !important;
+      }
+      nav ul {
+        gap: 2px !important;
+      }
+      .header-cta .btn-call span,
+      .header-cta .btn-whatsapp span {
+        display: none;
+      }
+    }
 
     /* ===== MOBILE ===== */
     @@media (max-width: 900px) {
@@ -1441,6 +1457,7 @@
             <li><a href="#reviews">آراء العملاء</a></li>
             <li><a href="#contact">اتصل بنا</a></li>
             <li><a href="https://movesaudii.com/" style="font-size: 11px; padding: 8px 6px; white-space: nowrap;">أفضل شركة نقل عفش بالقصيم</a></li>
+            <li><a href="https://movesaudii.com/" style="font-size: 11px; padding: 8px 6px; white-space: nowrap;">Furniture Moving Qassim</a></li>
           </ul>
         </nav>
         <div class="header-cta">
