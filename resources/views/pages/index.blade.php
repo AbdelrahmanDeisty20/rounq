@@ -200,10 +200,11 @@
       text-decoration: none;
       color: var(--text);
       font-weight: 600;
-      font-size: 14px;
-      padding: 8px 14px;
+      font-size: 13.5px;
+      padding: 8px 8px;
       border-radius: var(--radius-sm);
       transition: var(--transition);
+      white-space: nowrap;
     }
 
     nav ul li a:hover {
