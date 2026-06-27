@@ -151,6 +151,20 @@
       gap: 20px;
     }
 
+    @@media (min-width: 901px) {
+      header .container {
+        max-width: 1420px !important;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+      }
+      .header-inner {
+        gap: 10px !important;
+      }
+      .logo {
+        gap: 8px !important;
+      }
+    }
+
     .logo {
       display: flex;
       align-items: center;
