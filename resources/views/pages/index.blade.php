@@ -1470,8 +1470,8 @@
             <li><a href="#cities">مناطق النقل</a></li>
             <li><a href="#reviews">آراء العملاء</a></li>
             <li><a href="#contact">اتصل بنا</a></li>
-            <li><a href="https://movesaudii.com/" style="font-size: 11px; padding: 8px 6px; white-space: nowrap;">أفضل شركة نقل عفش بالقصيم</a></li>
-            <li><a href="https://movesaudii.com/" style="font-size: 11px; padding: 8px 6px; white-space: nowrap;">furniture-moving-qassim</a></li>
+            <li><a href="https://movesaudii.com/">أفضل شركة نقل عفش بالقصيم</a></li>
+            <li><a href="https://movesaudii.com/">furniture-moving-qassim</a></li>
           </ul>
         </nav>
         <div class="header-cta">
