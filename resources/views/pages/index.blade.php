@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="الأسطورة رونق قلب الخليج - من القصيم الى كل مدن المملكة مع خدمات الفك والتركيب والتغليف والتحميل والتنزيل. من القصيم الى جميع مدن المملكة بضمان وأسعار مناسبة.">
-  <meta name="keywords" content="القصيم, من القصيم الى كل مدن المملكة, القصيم الرياض, بالضمان">
-  <title>الأسطورة رونق قلب الخليج | من القصيم الى كل مدن المملكة</title>
+    content="الأسطورة رونق قلب الخليج - نقل عفش من القصيم الى كل مدن المملكة مع خدمات الفك والتركيب والتغليف والتحميل والتنزيل. من القصيم الى جميع مدن المملكة بضمان وأسعار مناسبة.">
+  <meta name="keywords" content="القصيم, نقل عفش من القصيم الى كل مدن المملكة, القصيم الرياض, بالضمان">
+  <title>الأسطورة رونق قلب الخليج | نقل عفش من القصيم الى كل مدن المملكة</title>
 
   <!-- Schema: Local Business -->
   <script type="application/ld+json">
@@ -1492,7 +1492,7 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">⭐ الأسطورة رونق قلب الخليج</div>
-        <h1>من القصيم الى كل مدن المملكة</h1>
+        <h1>نقل عفش من القصيم الى كل مدن المملكة</h1>
         <p>نقدم خدمات احترافية من القصيم إلى جميع مدن المملكة، مع فريق متخصص في الفك والتركيب والتغليف والتحميل
           والتنزيل، وضمان الأمان للأثاث.</p>
         <div class="hero-btns">
@@ -1623,16 +1623,16 @@
           <div class="cities-cards-grid">
             @php
               $cities = [
-                ['name' => 'من القصيم الى كل مدن المملكة', 'slug' => 'afzal-naql-afsh-qaseem', 'icon' => '🏙️'],
-                ['name' => 'من القصيم الى الرياض', 'slug' => 'naql-afsh-qaseem-riyadh', 'icon' => '🏙️'],
-                ['name' => 'من القصيم الى جدة', 'slug' => 'naql-afsh-qaseem-jeddah', 'icon' => '🌊'],
-                ['name' => 'من القصيم الى الدمام', 'slug' => 'naql-afsh-qaseem-dammam', 'icon' => '⛽'],
-                ['name' => 'من القصيم الى مكة المكرمة', 'slug' => 'naql-afsh-qaseem-makkah', 'icon' => '🕌'],
-                ['name' => 'من القصيم الى المدينة المنورة', 'slug' => 'naql-afsh-qaseem-madinah', 'icon' => '🕌'],
-                ['name' => 'من القصيم الى حائل', 'slug' => 'naql-afsh-qaseem-hail', 'icon' => '⛰️'],
-                ['name' => 'من القصيم الى الطائف', 'slug' => 'naql-afsh-qaseem-taif', 'icon' => '🌹'],
-                ['name' => 'من القصيم الى ينبع', 'slug' => 'naql-afsh-qaseem-yanbu', 'icon' => '⚓'],
-                ['name' => 'من القصيم الى سكاكا', 'slug' => 'naql-afsh-qaseem-sakaka', 'icon' => '🏰'],
+                ['name' => 'نقل عفش من القصيم الى كل مدن المملكة', 'slug' => 'afzal-naql-afsh-qaseem', 'icon' => '🏙️'],
+                ['name' => 'نقل عفش من القصيم الى الرياض', 'slug' => 'naql-afsh-qaseem-riyadh', 'icon' => '🏙️'],
+                ['name' => 'نقل عفش من القصيم الى جدة', 'slug' => 'naql-afsh-qaseem-jeddah', 'icon' => '🌊'],
+                ['name' => 'نقل عفش من القصيم الى الدمام', 'slug' => 'naql-afsh-qaseem-dammam', 'icon' => '⛽'],
+                ['name' => 'نقل عفش من القصيم الى مكة المكرمة', 'slug' => 'naql-afsh-qaseem-makkah', 'icon' => '🕌'],
+                ['name' => 'نقل عفش من القصيم الى المدينة المنورة', 'slug' => 'naql-afsh-qaseem-madinah', 'icon' => '🕌'],
+                ['name' => 'نقل عفش من القصيم الى حائل', 'slug' => 'naql-afsh-qaseem-hail', 'icon' => '⛰️'],
+                ['name' => 'نقل عفش من القصيم الى الطائف', 'slug' => 'naql-afsh-qaseem-taif', 'icon' => '🌹'],
+                ['name' => 'نقل عفش من القصيم الى ينبع', 'slug' => 'naql-afsh-qaseem-yanbu', 'icon' => '⚓'],
+                ['name' => 'نقل عفش من القصيم الى سكاكا', 'slug' => 'naql-afsh-qaseem-sakaka', 'icon' => '🏰'],
               ];
             @endphp
             @foreach($cities as $city)

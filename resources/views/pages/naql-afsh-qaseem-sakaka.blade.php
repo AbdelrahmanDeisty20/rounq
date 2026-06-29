@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="من القصيم الى سكاكا - الأسطورة رونق قلب الخليج. خدمة احترافية مع الفك والتركيب والتغليف بأسعار مناسبة وضمان كامل. اتصل الآن 0579796006">
-<title>من القصيم الى سكاكا | الأسطورة رونق قلب الخليج</title>
+<meta name="description" content="نقل عفش من القصيم الى سكاكا - الأسطورة رونق قلب الخليج. خدمة احترافية مع الفك والتركيب والتغليف بأسعار مناسبة وضمان كامل. اتصل الآن 0579796006">
+<title>نقل عفش من القصيم الى سكاكا | الأسطورة رونق قلب الخليج</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@@400;600;700;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -98,7 +98,7 @@ footer a{color:#F1C40F}
 
 <section class="hero">
 <div class="container">
-  <h1>من <span>القصيم الى سكاكا</span></h1>
+  <h1>نقل عفش من <span>القصيم الى سكاكا</span></h1>
   <p>خدمة احترافية من القصيم إلى سكاكا مع الفك والتركيب والتغليف الكامل. فريق متخصص وسيارات مجهزة وضمان على سلامة الأثاث طوال الرحلة.</p>
   <div class="hero-btns">
     <a href="tel:+966579796006" class="btn-primary">📞 اتصل الآن</a>
@@ -110,10 +110,10 @@ footer a{color:#F1C40F}
 <section>
 <div class="container">
   <span class="tag">القصيم الى سكاكا</span>
-  <h2>من القصيم الى سكاكا</h2>
+  <h2>نقل عفش من القصيم الى سكاكا</h2>
   <div class="divider"></div>
   <div class="content-body">
-    <p>تُعدّ <strong>الأسطورة رونق قلب الخليج</strong> من أبرز المتخصصين، ولا سيما خط <strong>من القصيم إلى سكاكا</strong>، الذي يُعتبر من أكثر المسارات طلباً في المملكة العربية السعودية.</p>
+    <p>تُعدّ <strong>الأسطورة رونق قلب الخليج</strong> من أبرز المتخصصين، ولا سيما خط <strong>نقل عفش من القصيم إلى سكاكا</strong>، الذي يُعتبر من أكثر المسارات طلباً في المملكة العربية السعودية.</p>
     <p>نعلم تماماً أن نقل الأثاث يُمثّل تحدياً كبيراً للعائلات والأفراد، لذلك نحرص على تقديم خدمة متكاملة تشمل كل تفاصيل العملية بداية من الفك الدقيق، مروراً بالتغليف الاحترافي، وانتهاءً بالتركيب الكامل في موقعك الجديد بسكاكا.</p>
     <p>المسافة بين القصيم وسكاكا تقارب 350 كيلومتراً، وهي مسافة تحتاج إلى شاحنات مجهزة ومدربة على التعامل مع الطرق السريعة والحفاظ على ثبات الحمولة. أسطولنا من الشاحنات مُجهَّز بنظام التثبيت الداخلي والحشوات الواقية لضمان وصول كل قطعة أثاث سليمة دون خدش أو كسر.</p>
     <h3>خدمة نقل العفش من القصيم الى سكاكا شاملة ومتكاملة</h3>
@@ -121,7 +121,7 @@ footer a{color:#F1C40F}
     <p>نتميز بتقديم هذه الخدمة بأسعار تنافسية مناسبة لجميع الميزانيات، إذ نؤمن أن الجودة والسعر المناسب يمكن أن يجتمعا في مكان واحد. ولهذا تحديداً يختارنا مئات العملاء سنوياً من القصيم إلى سكاكا.</p>
     <h3>لماذا نحن الخيار الأول لنقل العفش من القصيم للرياض؟</h3>
     <p>لأننا نجمع بين الخبرة الطويلة في مجال نقل العفش والتزام كامل بمعايير الجودة والأمانة. فريقنا مدرب على التعامل مع جميع أنواع الأثاث، سواء الخشبي أو الزجاجي أو الحديدي، مع مراعاة خصوصية كل قطعة وكيفية تغليفها الأنسب. كما أننا نحرص على الالتزام بالمواعيد وعدم إضاعة وقت العميل.</p>
-    <p>تواصل معنا اليوم واحصل على خدمة <strong>من القصيم الى سكاكا</strong> بسعر مناسب وضمان على سلامة الأثاث من أول لحظة حتى آخرها.</p>
+    <p>تواصل معنا اليوم واحصل على خدمة <strong>نقل عفش من القصيم الى سكاكا</strong> بسعر مناسب وضمان على سلامة الأثاث من أول لحظة حتى آخرها.</p>
   </div>
 </div>
 </section>
@@ -168,7 +168,7 @@ footer a{color:#F1C40F}
     <a href="naql-afsh-qaseem-madinah" class="city-link">🕌 للمدينة</a>
     <a href="naql-afsh-qaseem-hail" class="city-link">🏙️ لحائل</a>
     <a href="naql-afsh-qaseem-taif" class="city-link">🌿 للطائف</a>
-    <a href="afzal-naql-afsh-qaseem" class="city-link">⭐ من القصيم الى كل مدن المملكة</a>
+    <a href="afzal-naql-afsh-qaseem" class="city-link">⭐ نقل عفش من القصيم الى كل مدن المملكة</a>
     <a href="index" class="city-link">🏠 الصفحة الرئيسية</a>
   </div>
 </div>
@@ -176,7 +176,7 @@ footer a{color:#F1C40F}
 
 <div class="cta-bar">
 <div class="container">
-  <h2>جاهز لك من القصيم الى سكاكا؟</h2>
+  <h2>جاهز لنقل العفش من القصيم الى سكاكا؟</h2>
   <p>تواصل معنا الآن واحصل على عرض سعر مجاني وخدمة احترافية بضمان</p>
   <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
     <a href="tel:+966579796006" class="btn-primary" style="background:#fff;color:var(--red)">📞 اتصل الآن</a>
@@ -187,7 +187,7 @@ footer a{color:#F1C40F}
 
 <footer>
 <div class="container">
-  <p>🚛 <strong>الأسطورة رونق قلب الخليج</strong> | من القصيم الى سكاكا</p>
+  <p>🚛 <strong>الأسطورة رونق قلب الخليج</strong> | نقل عفش من القصيم الى سكاكا</p>
   <p>📞 <a href="tel:+966579796006">0579796006</a> | القصيم، المملكة العربية السعودية</p>
   <p style="margin-top:16px;opacity:.5;font-size:13px">© 2025 جميع الحقوق محفوظة | <a href="index">الصفحة الرئيسية</a></p><p style="margin-top:5px;opacity:.8;font-size:12px">Designed and Developed by <a href="https://fourthpyramidagcy.com/" target="_blank" style="color: #F1C40F; text-decoration: underline;">Fourth Pyramid Agency</a></p>
 </div>
